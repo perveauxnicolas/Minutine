@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3BC1762BAAF20B00F23DBD /* MorningRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BC1752BAAF20B00F23DBD /* MorningRoutineViewController.swift */; };
+		8B3BC1782BAAF2C800F23DBD /* EveningRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BC1772BAAF2C800F23DBD /* EveningRoutineViewController.swift */; };
+		8BC8FD2F2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC8FD2E2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift */; };
 		8BE5E6182BA352D40015E411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E6172BA352D40015E411 /* AppDelegate.swift */; };
 		8BE5E61A2BA352D40015E411 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E6192BA352D40015E411 /* SceneDelegate.swift */; };
-		8BE5E61C2BA352D40015E411 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E61B2BA352D40015E411 /* ViewController.swift */; };
 		8BE5E61F2BA352D40015E411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E61D2BA352D40015E411 /* Main.storyboard */; };
 		8BE5E6212BA352D70015E411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E6202BA352D70015E411 /* Assets.xcassets */; };
 		8BE5E6242BA352D70015E411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E6222BA352D70015E411 /* LaunchScreen.storyboard */; };
@@ -36,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B3BC1752BAAF20B00F23DBD /* MorningRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningRoutineViewController.swift; sourceTree = "<group>"; };
+		8B3BC1772BAAF2C800F23DBD /* EveningRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveningRoutineViewController.swift; sourceTree = "<group>"; };
+		8BC8FD2E2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningRoutineTimerViewController.swift; sourceTree = "<group>"; };
 		8BE5E6142BA352D40015E411 /* Minutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5E6172BA352D40015E411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE5E6192BA352D40015E411 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8BE5E61B2BA352D40015E411 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BE5E61E2BA352D40015E411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BE5E6202BA352D70015E411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BE5E6232BA352D70015E411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +80,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B3BC1702BAAEE0D00F23DBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8B3BC1712BAAEE2400F23DBD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B3BC1722BAAEE3A00F23DBD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B3BC1752BAAF20B00F23DBD /* MorningRoutineViewController.swift */,
+				8B3BC1772BAAF2C800F23DBD /* EveningRoutineViewController.swift */,
+				8BC8FD2E2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8B3BC1732BAAEE4A00F23DBD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8BE5E61D2BA352D40015E411 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B3BC1742BAAEE5F00F23DBD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8BE5E6172BA352D40015E411 /* AppDelegate.swift */,
+				8BE5E6192BA352D40015E411 /* SceneDelegate.swift */,
+				8BE5E6222BA352D70015E411 /* LaunchScreen.storyboard */,
+				8BE5E6202BA352D70015E411 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8BE5E60B2BA352D40015E411 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +146,12 @@
 		8BE5E6162BA352D40015E411 /* Minutine */ = {
 			isa = PBXGroup;
 			children = (
-				8BE5E6172BA352D40015E411 /* AppDelegate.swift */,
-				8BE5E6192BA352D40015E411 /* SceneDelegate.swift */,
-				8BE5E61B2BA352D40015E411 /* ViewController.swift */,
-				8BE5E61D2BA352D40015E411 /* Main.storyboard */,
-				8BE5E6202BA352D70015E411 /* Assets.xcassets */,
-				8BE5E6222BA352D70015E411 /* LaunchScreen.storyboard */,
 				8BE5E6252BA352D70015E411 /* Info.plist */,
+				8B3BC1702BAAEE0D00F23DBD /* Extensions */,
+				8B3BC1712BAAEE2400F23DBD /* Model */,
+				8B3BC1722BAAEE3A00F23DBD /* Controller */,
+				8B3BC1732BAAEE4A00F23DBD /* View */,
+				8B3BC1742BAAEE5F00F23DBD /* Supporting Files */,
 			);
 			path = Minutine;
 			sourceTree = "<group>";
@@ -258,9 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BE5E61C2BA352D40015E411 /* ViewController.swift in Sources */,
+				8B3BC1762BAAF20B00F23DBD /* MorningRoutineViewController.swift in Sources */,
 				8BE5E6182BA352D40015E411 /* AppDelegate.swift in Sources */,
+				8B3BC1782BAAF2C800F23DBD /* EveningRoutineViewController.swift in Sources */,
 				8BE5E61A2BA352D40015E411 /* SceneDelegate.swift in Sources */,
+				8BC8FD2F2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
