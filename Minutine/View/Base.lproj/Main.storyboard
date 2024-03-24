@@ -18,24 +18,77 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Kls-nm-LYo" kind="relationship" relationship="rootViewController" id="EXQ-YT-Hcr"/>
+                        <segue destination="Kls-nm-LYo" kind="relationship" relationship="rootViewController" id="q9S-GQ-fGz"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RrD-Rc-B7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="534" y="130"/>
         </scene>
-        <!--View Controller-->
+        <!--Evening Routine View Controller-->
         <scene sceneID="D9j-gs-6IW">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Kls-nm-LYo" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Kls-nm-LYo" customClass="EveningRoutineViewController" customModule="Minutine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bPB-GM-IRb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="QjI-AM-JvA">
+                                <rect key="frame" x="85.666666666666671" y="204" width="221.66666666666663" height="444"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdI-Cy-Ohq">
+                                        <rect key="frame" x="0.0" y="0.0" width="221.66666666666666" height="110"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Se laver">
+                                            <fontDescription key="titleFontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="60"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapeWashButton:" destination="FgP-ZJ-zKN" eventType="touchUpInside" id="AJ3-y9-ThE"/>
+                                            <action selector="tapeWashButton:" destination="Kls-nm-LYo" eventType="touchUpInside" id="jqd-JD-j1m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcQ-bE-PbW">
+                                        <rect key="frame" x="0.0" y="167" width="221.66666666666666" height="110"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="S'habiller">
+                                            <fontDescription key="titleFontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="60"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapeGetDressedButton:" destination="FgP-ZJ-zKN" eventType="touchUpInside" id="DDq-8l-xQd"/>
+                                            <action selector="tapeGetDressedButton:" destination="Kls-nm-LYo" eventType="touchUpInside" id="tOt-3l-Egb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dly-Da-geN">
+                                        <rect key="frame" x="0.0" y="334" width="221.66666666666666" height="110"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Manger">
+                                            <fontDescription key="titleFontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="60"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapeEatButton:" destination="FgP-ZJ-zKN" eventType="touchUpInside" id="5Vi-LI-9tw"/>
+                                            <action selector="tapeEatButton:" destination="Kls-nm-LYo" eventType="touchUpInside" id="wH4-kk-a1j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="07P-oi-Woy"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" red="0.076554745610000002" green="0.02560664147" blue="0.43965041040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="QjI-AM-JvA" firstAttribute="centerX" secondItem="bPB-GM-IRb" secondAttribute="centerX" id="VIS-dr-HZA"/>
+                            <constraint firstItem="QjI-AM-JvA" firstAttribute="centerY" secondItem="bPB-GM-IRb" secondAttribute="centerY" id="aYf-1M-pSL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9rZ-yI-Ebr"/>
+                    <connections>
+                        <outlet property="eatButton" destination="dly-Da-geN" id="F4a-UE-ncl"/>
+                        <outlet property="getDressedButton" destination="vcQ-bE-PbW" id="JPU-Eh-CtN"/>
+                        <outlet property="washButton" destination="QdI-Cy-Ohq" id="MEo-RI-KqH"/>
+                        <segue destination="Got-qv-LxT" kind="presentation" identifier="segueToTimer2" id="zag-nB-WvR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWH-lE-0L8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,30 +130,36 @@
                                             <fontDescription key="titleFontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="60"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Got-qv-LxT" kind="show" id="lXl-rv-C7h"/>
+                                            <action selector="tapeWashButton:" destination="FgP-ZJ-zKN" eventType="touchUpInside" id="0Gf-YK-ZTD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBS-SF-cRQ">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBS-SF-cRQ">
                                         <rect key="frame" x="0.0" y="167" width="221.66666666666666" height="110"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="S'habiller">
                                             <fontDescription key="titleFontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="60"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapeGetDressedButton:" destination="FgP-ZJ-zKN" eventType="touchUpInside" id="yo2-CG-Uj0"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwA-Vi-rA5">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwA-Vi-rA5">
                                         <rect key="frame" x="0.0" y="334" width="221.66666666666666" height="110"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Manger">
                                             <fontDescription key="titleFontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="60"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tapeEatButton:" destination="FgP-ZJ-zKN" eventType="touchUpInside" id="VUq-YV-dBz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cWg-3X-f1e"/>
-                        <color key="backgroundColor" red="0.4371297744" green="1" blue="0.63383037490000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
                         <constraints>
                             <constraint firstItem="yP8-2T-ZWU" firstAttribute="centerY" secondItem="g6V-nn-tqn" secondAttribute="centerY" id="8kA-tP-MnA"/>
                             <constraint firstItem="yP8-2T-ZWU" firstAttribute="centerX" secondItem="g6V-nn-tqn" secondAttribute="centerX" id="UMg-Fh-FzM"/>
@@ -108,28 +167,73 @@
                     </view>
                     <navigationItem key="navigationItem" id="kFq-nP-1ir"/>
                     <connections>
+                        <outlet property="eatButton" destination="bwA-Vi-rA5" id="K8c-Gx-qfQ"/>
+                        <outlet property="getDressedButton" destination="SBS-SF-cRQ" id="lQT-WT-zUX"/>
                         <outlet property="washButton" destination="2Dt-32-ZTI" id="upV-YI-OTv"/>
+                        <segue destination="Got-qv-LxT" kind="presentation" identifier="segueToTimer" id="C4m-yk-Sf2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EiI-mf-GNi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1594.6564885496182" y="-595.07042253521126"/>
         </scene>
-        <!--Morning Routine Timer View Controller-->
+        <!--Routine Timer View Controller-->
         <scene sceneID="Nop-uz-Ke3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Got-qv-LxT" customClass="MorningRoutineTimerViewController" customModule="Minutine" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Got-qv-LxT" customClass="RoutineTimerViewController" customModule="Minutine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qjq-mI-XXO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUT-zn-4aF" userLabel="timerView">
+                                <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1iR-n3-EF8"/>
+                                    <constraint firstAttribute="height" constant="300" id="WDt-Dy-3MG"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="28X-ht-ayQ">
+                                <rect key="frame" x="141.33333333333334" y="664" width="110.33333333333334" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9R3-nZ-vem">
+                                        <rect key="frame" x="0.0" y="0.0" width="110.33333333333333" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.4371297744" green="1" blue="0.63383037490000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="startButton"/>
+                                        <connections>
+                                            <action selector="TapStartButton:" destination="Got-qv-LxT" eventType="touchUpInside" id="QEa-v3-DiH"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXQ-qM-4g9">
+                                        <rect key="frame" x="0.0" y="0.0" width="110.33333333333333" height="0.0"/>
+                                        <color key="backgroundColor" red="1" green="0.24420809069999999" blue="0.23294392380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="StopButton"/>
+                                        <connections>
+                                            <action selector="tapeStopButton:" destination="Got-qv-LxT" eventType="touchUpInside" id="FsG-ba-ehU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eij-1u-vJU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="28X-ht-ayQ" firstAttribute="top" secondItem="DUT-zn-4aF" secondAttribute="bottom" constant="88" id="Cwi-bZ-aIU"/>
+                            <constraint firstItem="DUT-zn-4aF" firstAttribute="centerY" secondItem="qjq-mI-XXO" secondAttribute="centerY" id="Hnz-OT-kZi"/>
+                            <constraint firstItem="28X-ht-ayQ" firstAttribute="centerX" secondItem="qjq-mI-XXO" secondAttribute="centerX" id="L3S-y8-g0J"/>
+                            <constraint firstItem="DUT-zn-4aF" firstAttribute="centerX" secondItem="qjq-mI-XXO" secondAttribute="centerX" id="tUN-Om-Pcd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fwp-Xd-lFH"/>
+                    <connections>
+                        <outlet property="startButton" destination="9R3-nZ-vem" id="9iB-t7-a4S"/>
+                        <outlet property="stopButton" destination="WXQ-qM-4g9" id="NcO-Wx-zT8"/>
+                        <outlet property="timerView" destination="DUT-zn-4aF" id="DcL-8c-FqP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rov-Wv-yVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2572" y="-595"/>
+            <point key="canvasLocation" x="2571.7557251908397" y="-595.07042253521126"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MSA-oR-144">
@@ -150,12 +254,12 @@
             <point key="canvasLocation" x="-369" y="-291"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zag-nB-WvR"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

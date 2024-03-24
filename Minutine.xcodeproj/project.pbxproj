@@ -9,7 +9,13 @@
 /* Begin PBXBuildFile section */
 		8B3BC1762BAAF20B00F23DBD /* MorningRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BC1752BAAF20B00F23DBD /* MorningRoutineViewController.swift */; };
 		8B3BC1782BAAF2C800F23DBD /* EveningRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BC1772BAAF2C800F23DBD /* EveningRoutineViewController.swift */; };
-		8BC8FD2F2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC8FD2E2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift */; };
+		8B97554E2BAC9E550026B111 /* RoutineResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97554D2BAC9E550026B111 /* RoutineResult.swift */; };
+		8B9755522BAC9F6E0026B111 /* Minutine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755502BAC9F6E0026B111 /* Minutine.xcdatamodeld */; };
+		8B9755542BAC9F970026B111 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755532BAC9F970026B111 /* CoreDataStack.swift */; };
+		8B9755562BAC9FBF0026B111 /* CoreDataSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755552BAC9FBF0026B111 /* CoreDataSetting.swift */; };
+		8B9755582BACA5710026B111 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755572BACA5710026B111 /* UIViewController+Helpers.swift */; };
+		8B97555A2BACAF000026B111 /* TimerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755592BACAF000026B111 /* TimerSetting.swift */; };
+		8BC8FD2F2BAAFF1B004DC3CE /* RoutineTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC8FD2E2BAAFF1B004DC3CE /* RoutineTimerViewController.swift */; };
 		8BE5E6182BA352D40015E411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E6172BA352D40015E411 /* AppDelegate.swift */; };
 		8BE5E61A2BA352D40015E411 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E6192BA352D40015E411 /* SceneDelegate.swift */; };
 		8BE5E61F2BA352D40015E411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E61D2BA352D40015E411 /* Main.storyboard */; };
@@ -40,7 +46,13 @@
 /* Begin PBXFileReference section */
 		8B3BC1752BAAF20B00F23DBD /* MorningRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningRoutineViewController.swift; sourceTree = "<group>"; };
 		8B3BC1772BAAF2C800F23DBD /* EveningRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveningRoutineViewController.swift; sourceTree = "<group>"; };
-		8BC8FD2E2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningRoutineTimerViewController.swift; sourceTree = "<group>"; };
+		8B97554D2BAC9E550026B111 /* RoutineResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineResult.swift; sourceTree = "<group>"; };
+		8B9755512BAC9F6E0026B111 /* Minutine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Minutine.xcdatamodel; sourceTree = "<group>"; };
+		8B9755532BAC9F970026B111 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		8B9755552BAC9FBF0026B111 /* CoreDataSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSetting.swift; sourceTree = "<group>"; };
+		8B9755572BACA5710026B111 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
+		8B9755592BACAF000026B111 /* TimerSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSetting.swift; sourceTree = "<group>"; };
+		8BC8FD2E2BAAFF1B004DC3CE /* RoutineTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTimerViewController.swift; sourceTree = "<group>"; };
 		8BE5E6142BA352D40015E411 /* Minutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5E6172BA352D40015E411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE5E6192BA352D40015E411 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +95,7 @@
 		8B3BC1702BAAEE0D00F23DBD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				8B9755572BACA5710026B111 /* UIViewController+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -90,6 +103,9 @@
 		8B3BC1712BAAEE2400F23DBD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8B97554F2BAC9F0A0026B111 /* CoreData */,
+				8B97554D2BAC9E550026B111 /* RoutineResult.swift */,
+				8B9755592BACAF000026B111 /* TimerSetting.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,7 +115,7 @@
 			children = (
 				8B3BC1752BAAF20B00F23DBD /* MorningRoutineViewController.swift */,
 				8B3BC1772BAAF2C800F23DBD /* EveningRoutineViewController.swift */,
-				8BC8FD2E2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift */,
+				8BC8FD2E2BAAFF1B004DC3CE /* RoutineTimerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +137,16 @@
 				8BE5E6202BA352D70015E411 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B97554F2BAC9F0A0026B111 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8B9755502BAC9F6E0026B111 /* Minutine.xcdatamodeld */,
+				8B9755532BAC9F970026B111 /* CoreDataStack.swift */,
+				8B9755552BAC9FBF0026B111 /* CoreDataSetting.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		8BE5E60B2BA352D40015E411 = {
@@ -306,9 +332,15 @@
 			files = (
 				8B3BC1762BAAF20B00F23DBD /* MorningRoutineViewController.swift in Sources */,
 				8BE5E6182BA352D40015E411 /* AppDelegate.swift in Sources */,
+				8B9755562BAC9FBF0026B111 /* CoreDataSetting.swift in Sources */,
 				8B3BC1782BAAF2C800F23DBD /* EveningRoutineViewController.swift in Sources */,
 				8BE5E61A2BA352D40015E411 /* SceneDelegate.swift in Sources */,
-				8BC8FD2F2BAAFF1B004DC3CE /* MorningRoutineTimerViewController.swift in Sources */,
+				8B97555A2BACAF000026B111 /* TimerSetting.swift in Sources */,
+				8BC8FD2F2BAAFF1B004DC3CE /* RoutineTimerViewController.swift in Sources */,
+				8B9755522BAC9F6E0026B111 /* Minutine.xcdatamodeld in Sources */,
+				8B97554E2BAC9E550026B111 /* RoutineResult.swift in Sources */,
+				8B9755582BACA5710026B111 /* UIViewController+Helpers.swift in Sources */,
+				8B9755542BAC9F970026B111 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +689,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B9755502BAC9F6E0026B111 /* Minutine.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B9755512BAC9F6E0026B111 /* Minutine.xcdatamodel */,
+			);
+			currentVersion = 8B9755512BAC9F6E0026B111 /* Minutine.xcdatamodel */;
+			path = Minutine.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8BE5E60C2BA352D40015E411 /* Project object */;
 }
