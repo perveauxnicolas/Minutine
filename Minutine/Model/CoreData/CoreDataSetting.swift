@@ -29,5 +29,21 @@ final class CoreDataSetting {
     
     // MARK: - Manage Task Entity
     
+    func createRoutine(validWashRoutine: Bool) {
+  //      let routine = RoutineEntity(context: managedObjectContext)
+//        routine.validWashRoutineAM = true
+     //   routine.validGetDressedRoutineAM = true
+     //   routine.validEatRoutineAM = true
+        
+        coreDataStack.saveContext()
+     /*   recipe.ingredients = ingredients
+        recipe.time = time
+        recipe.url = url*/
+    }
+    
+    func deleteRoutine() {
+        routines.forEach { managedObjectContext.delete($0) }
+        coreDataStack.saveContext()
+    }
     
 }

@@ -7,24 +7,64 @@
 
 import Foundation
 
-    // MARK: - RoutineResult
-    struct RoutineResult {
-      //  var hasMajority: Bool
-        let validWashRoutine: Bool
-    //    let validGetDressedRoutine: Bool
-    //    let validEatRoutine: Bool
-     //   let routineWeek: RoutineWeek
-    }
+// MARK: - RoutineResult
+struct RoutineResult {
+    var routineDays : [RoutineDay]
+}
+// MARK: - RoutineDay
+struct RoutineDay {
+    var routine: Routine
 
-    struct RoutineWeek {
-        let mondayRoutine = Bool()
-        let tuesdayRoutine = Bool()
-        let WednesdayRoutine = Bool()
-        let thursdayRoutine = Bool()
-        let fridayRoutine = Bool()
-        let saturdayRoutine = Bool()
-        let sundayRoutine = Bool()
-         }
+}
+// MARK: - RoutineDay
+struct Routine {
+    var validWashRoutineAM: Bool
+    var validGetDressedRoutineAM: Bool
+    var validEatRoutineAM: Bool
+    var validWashRoutinePM: Bool
+    var validGetDressedRoutinePM: Bool
+    var validEatRoutinePM: Bool
+    var day: [String]
+}
+/*
+let routine = Routine(validWashRoutineAM: true,
+                      validGetDressedRoutineAM: true,
+                      validEatRoutineAM: false,
+                      validWashRoutinePM: true,
+                      validGetDressedRoutinePM: false,
+                      validEatRoutinePM: true)
+}*/
+
+
+
+//let hits: [Hit]
+
+
+
+// struct Hit: Decodable {
+//     let recipe: Recipe
+
+
+
+
+
+
+
+
+/*  let tuesdayRoutine = Bool()
+  let WednesdayRoutine = Bool()
+  let thursdayRoutine = Bool()
+  let fridayRoutine = Bool()
+  let saturdayRoutine = Bool()
+  let sundayRoutine = Bool() */
+
+
+
+
+
+
+
+/*
 
 extension RoutineResult {
     enum Status {
@@ -32,9 +72,9 @@ extension RoutineResult {
         case rejected(String)
     }
     var status: Status {
-    //    guard let name = name, name.isEmpty == false else {
-    //        return .rejected("Vous n'avez pas indiqué votre nom !")
-    //    }
+        //    guard let name = name, name.isEmpty == false else {
+        //        return .rejected("Vous n'avez pas indiqué votre nom !")
+        //    }
         
         guard validWashRoutine == false else {
             return .rejected("Les mineurs ne sont pas admis.")
@@ -43,7 +83,7 @@ extension RoutineResult {
     }
 }
 
-
+*/
 
 
 /*     let ValidationRoutine : Bool
@@ -57,28 +97,28 @@ extension RoutineResult {
 
 
 /*
-let now = Date()
-
-let english       = DateFormatter()
-english.dateStyle = .medium
-english.timeStyle = .medium
-english.locale    = Locale(identifier: "EN-en")
-print(english.string(from: now)) // Jan 20, 2017, 10:29:51 PM
-*/
+ let now = Date()
+ 
+ let english       = DateFormatter()
+ english.dateStyle = .medium
+ english.timeStyle = .medium
+ english.locale    = Locale(identifier: "EN-en")
+ print(english.string(from: now)) // Jan 20, 2017, 10:29:51 PM
+ */
 // MARK: - Protocols
 
-  // MARK: - Properties
-  
-  // MARK: - Methods
-  
-  // MARK: - View life cycle
+// MARK: - Properties
 
-  // MARK: - Outlets
+// MARK: - Methods
 
-  // MARK: - Actions
+// MARK: - View life cycle
 
-  // MARK: - Privates
+// MARK: - Outlets
 
-  // MARK: - Navigations
-  
-  // MARK: - Extensions
+// MARK: - Actions
+
+// MARK: - Privates
+
+// MARK: - Navigations
+
+// MARK: - Extensions

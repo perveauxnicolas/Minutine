@@ -23,133 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0C546B91-07CF-4A27-8543-F1EA07471331"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Minutine/Controller/RoutineTimerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "RoutineTimerViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "0C546B91-07CF-4A27-8543-F1EA07471331 - 34c51ab8d9c3720d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Minutine.RoutineTimerViewController.TapStartButton(__C.UIButton) -&gt; ()"
-                  moduleName = "Minutine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "148">
-               </Location>
-               <Location
-                  uuid = "0C546B91-07CF-4A27-8543-F1EA07471331 - 34c51ab8d9c3720d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Minutine.RoutineTimerViewController.TapStartButton(__C.UIButton) -&gt; ()"
-                  moduleName = "Minutine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "492">
-               </Location>
-               <Location
-                  uuid = "0C546B91-07CF-4A27-8543-F1EA07471331 - 34c51ab8d9c3722c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Minutine.RoutineTimerViewController.TapStartButton(__C.UIButton) -&gt; ()"
-                  moduleName = "Minutine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "480">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "374A28CC-4816-41D9-A5FA-10747C30F4FA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Minutine/Controller/RoutineTimerViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "tapeStopButton(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "374A28CC-4816-41D9-A5FA-10747C30F4FA - 50a006b2af674bbb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Minutine.RoutineTimerViewController.tapeStopButton(Any) -&gt; ()"
-                  moduleName = "Minutine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "374A28CC-4816-41D9-A5FA-10747C30F4FA - 60b3731b6ee397a7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in Minutine.RoutineTimerViewController.tapeStopButton(Any) -&gt; ()"
-                  moduleName = "Minutine"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3B466F24-4253-43E2-ACFD-8567BA2C52AE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Minutine/Model/RoutineResult.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "RoutineResult"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "43AE40C9-C963-4FC5-AFD1-B90211D258E0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -157,10 +30,166 @@
             filePath = "Minutine/Controller/RoutineTimerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "createPetObject()"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0753B269-2419-4BD6-B499-9915092AEC7F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Minutine/Controller/MorningRoutineViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "MorningRoutineViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BFA26F3-1F02-4862-BA0A-D418932F902F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Minutine/Controller/RoutineTimerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "returnSuccesToMorningRoutineViewController()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C42C81BF-0C6E-4A1F-9FB0-F37CF4CDCE7D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Minutine/Controller/RoutineTimerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "RoutineTimerViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8AB8BD48-1EB0-46A6-9EA1-D60449841F0E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Minutine/Controller/RoutineTimerViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "RoutineTimerViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "8AB8BD48-1EB0-46A6-9EA1-D60449841F0E - eeee38bfb7b1e48b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minutine.RoutineTimerViewController.buttonTag.getter : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Minutine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "8AB8BD48-1EB0-46A6-9EA1-D60449841F0E - c13c973e53477673"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minutine.RoutineTimerViewController.buttonTag.setter : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Minutine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "8AB8BD48-1EB0-46A6-9EA1-D60449841F0E - 14d122a8f4a95764"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minutine.RoutineTimerViewController.buttonTag.modify : Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Minutine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "8AB8BD48-1EB0-46A6-9EA1-D60449841F0E - 28fac5e0da647d34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minutine.RoutineTimerViewController.buttonTag.modify : Swift.Optional&lt;Swift.Int&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Minutine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "8AB8BD48-1EB0-46A6-9EA1-D60449841F0E - a62c579dae5def43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minutine.RoutineTimerViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Minutine.RoutineTimerViewController"
+                  moduleName = "Minutine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "404">
+               </Location>
+               <Location
+                  uuid = "8AB8BD48-1EB0-46A6-9EA1-D60449841F0E - 99e2c8103e4ad1f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Minutine.RoutineTimerViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Minutine.RoutineTimerViewController&gt;"
+                  moduleName = "Minutine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Minutine/Minutine/Controller/RoutineTimerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "380">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

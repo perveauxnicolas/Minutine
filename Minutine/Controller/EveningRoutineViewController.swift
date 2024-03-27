@@ -27,12 +27,14 @@ class EveningRoutineViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func tapeWashButton(_ sender: UIButton) {
-        getTimer()
+        performSegue(withIdentifier: self.segueToTimer2, sender: sender.tag)
+      //  getTimer()
     }
     
     @IBAction func tapeGetDressedButton(_ sender: UIButton) {
-        // simpleCalc.addNewNumber(sender.tag)
         getTimer()
+        // simpleCalc.addNewNumber(sender.tag)
+
     }
     
     @IBAction func tapeEatButton(_ sender: UIButton) {
