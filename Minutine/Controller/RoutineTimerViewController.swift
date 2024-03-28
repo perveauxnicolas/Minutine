@@ -13,142 +13,165 @@ class RoutineTimerViewController: UIViewController {
     let timerLayer = CAShapeLayer()
     let timerLayerFond = CAShapeLayer()
     let timerSetting = TimerSetting()
-   
     var routineResult = [RoutineDay]()
     
-    var originViewController: MorningRoutineViewController?
-    var buttonTag: Int? /// Variable pour stocker le tag du bouton
+    var originViewControllerAM: MorningRoutineViewController?
+    var originViewControllerPM: EveningRoutineViewController?
+    var buttonTag: Int?
+    
+    //   var myRoutine = Routine(day: "", validWashRoutineAM: "", validGetDressedRoutineAM: "", validEatRoutineAM: "", validWashRoutinePM: "", validGetDressedRoutinePM: "", validEatRoutinePM: "")
+    
     
     // MARK: - Outlets
     @IBOutlet weak var stopButton: UIButton!
-  //  @IBOutlet weak var startButton: UIButton!
-    //  @IBOutlet weak var timerView: UIView!
     
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(displayP3Red: 44/255, green: 62/255, blue: 80/255, alpha: 1)
-        /// Start animation when ViewController2 is loaded
         setupTimerAnimation(timerLayer: timerLayer, timerLayerFond: timerLayerFond)
-        /// Schedule to return to ViewController1 after 5 seconds
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [weak self] in         ///  to return to ViewController1 after 5 seconds
             self?.returnFailedToMorningRoutineViewController()
         }
     }
     
     // MARK: - Actions
     @IBAction func tapeditsdoneButton(_ sender: Any) {
+        //   validRoutine(validated: true)
         returnSuccesToMorningRoutineViewController()
     }
     
-    // MARK: - Actions
-    func returnFailedToMorningRoutineViewController() {
-        print("Tag du bouton reçu : \(buttonTag ?? 10)")
-        
-        if buttonTag == 0 {
-            let washButtonRed = UIImage(named: "washR") /// Remplacez "newImage" par le nom de votre nouvelle image
-            routineResult[0].routine.validEatRoutineAM = false
-            routineResult[0].routine.day = ["jour 1"]
-            
-            originViewController?.washButton.setImage(washButtonRed, for: .normal)
-            originViewController?.washButton.isEnabled = false
-            
-        } else if buttonTag == 1 {
-            let getDressedBButtonRed = UIImage(named: "getDressedR")
-            originViewController?.getDressedButton.setImage(getDressedBButtonRed, for: .normal)
-            originViewController?.getDressedButton.isEnabled = false
-            
-        } else if buttonTag == 2 {
-            let eatButtonRed = UIImage(named: "eatR")
-            originViewController?.eatButton.setImage(eatButtonRed, for: .normal)
-            originViewController?.eatButton.isEnabled = false
+    // MARK: - Methods
+    
+    /*  func addDay() {
+     if myRoutine.day.isEmpty {
+     myRoutine.day.append("jour 1")
+     } else if myRoutine.day.count < 7 {
+     // Si le tableau day contient moins de 7 jours
+     let lastDay = myRoutine.day.last! // Récupère le dernier jour ajouté
+     let lastDayNumber = Int(lastDay.split(separator: " ")[1])! // Récupère le numéro du dernier jour
+     myRoutine.day.append("jour \(lastDayNumber + 1)") // Ajoute le prochain jour
+     }
+     }*/
+    
+    func validRoutine(validated: Bool) {
+        // Créez une instance de Routine avec une valeur initiale vide pour validWashRoutineAM
+        var routine = Routine(day: "", validWashRoutineAM: "", validGetDressedRoutineAM: "", validEatRoutineAM: "", validWashRoutinePM: "", validGetDressedRoutinePM: "", validEatRoutinePM: "")
+        // Mettez à jour la variable validWashRoutineAM selon la valeur de validated
+        if validated {
+            routine.validWashRoutineAM = "Validé"
+        } else if routine.validWashRoutineAM.isEmpty {
+            routine.validWashRoutineAM = "Validé"
         }
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true) {}
+        // Vous pouvez maintenant utiliser la structure Routine mise à jour selon vos besoins
     }
     
     
     
     
     func returnSuccesToMorningRoutineViewController() {
+        var routine = Routine(day: "", validWashRoutineAM: "", validGetDressedRoutineAM: "", validEatRoutineAM: "", validWashRoutinePM: "", validGetDressedRoutinePM: "", validEatRoutinePM: "")
+        routine.day = "lundi"
+        
         if buttonTag == 0 {
             let washButtonGreen = UIImage(named: "washV")
-            //  routineResult.validWashRoutine = true
-            originViewController?.washButton.setImage(washButtonGreen, for: .normal)
-            originViewController?.washButton.isEnabled = false
+            routine.validWashRoutineAM = "Validé"
+            
+            originViewControllerAM?.washButton.setImage(washButtonGreen, for: .normal)
+            originViewControllerAM?.washButton.isEnabled = false
             
         } else if buttonTag == 1 {
             let getDressedBButtonGreen = UIImage(named: "getDressedV")
-            originViewController?.getDressedButton.setImage(getDressedBButtonGreen, for: .normal)
-            originViewController?.getDressedButton.isEnabled = false
+            routine.validGetDressedRoutineAM = "Validé"
+            
+            originViewControllerAM?.getDressedButton.setImage(getDressedBButtonGreen, for: .normal)
+            originViewControllerAM?.getDressedButton.isEnabled = false
             
         } else if buttonTag == 2 {
             let eatButtonGreen = UIImage(named: "eatV")
-            originViewController?.eatButton.setImage(eatButtonGreen, for: .normal)
-            originViewController?.eatButton.isEnabled = false
+            routine.validEatRoutineAM = "Validé"
+            
+            
+            originViewControllerAM?.eatButton.setImage(eatButtonGreen, for: .normal)
+            originViewControllerAM?.eatButton.isEnabled = false
+            
+        } else if buttonTag == 3 {
+            let washButtonGreen = UIImage(named: "washV")
+            routine.validWashRoutineAM = "Validé"
+            
+            originViewControllerPM?.washButton.setImage(washButtonGreen, for: .normal)
+            originViewControllerPM?.washButton.isEnabled = false
+            
+        } else if buttonTag == 4 {
+            let getDressedBButtonGreen = UIImage(named: "getDressedV")
+            routine.validGetDressedRoutinePM = "Validé"
+            
+            
+            originViewControllerPM?.getDressedButton.setImage(getDressedBButtonGreen, for: .normal)
+            originViewControllerPM?.getDressedButton.isEnabled = false
+            
+        } else if buttonTag == 5 {
+            let eatButtonGreen = UIImage(named: "eatV")
+            routine.validEatRoutinePM = "Validé"
+            
+            
+            originViewControllerPM?.eatButton.setImage(eatButtonGreen, for: .normal)
+            originViewControllerPM?.eatButton.isEnabled = false
+        }
+        //  saveRoutine()
+        
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true) {}
+    }
+    
+    func returnFailedToMorningRoutineViewController() {
+        print("Tag du bouton reçu : \(buttonTag ?? 10)")
+        
+        if buttonTag == 0 {
+            let washButtonRed = UIImage(named: "washR") /// Remplacez "newImage" par le nom de votre nouvelle image
+            originViewControllerAM?.washButton.setImage(washButtonRed, for: .normal)
+            originViewControllerAM?.washButton.isEnabled = false
+            
+        } else if buttonTag == 1 {
+            let getDressedBButtonRed = UIImage(named: "getDressedR")
+            originViewControllerAM?.getDressedButton.setImage(getDressedBButtonRed, for: .normal)
+            originViewControllerAM?.getDressedButton.isEnabled = false
+            
+        } else if buttonTag == 2 {
+            let eatButtonRed = UIImage(named: "eatR")
+            originViewControllerAM?.eatButton.setImage(eatButtonRed, for: .normal)
+            originViewControllerAM?.eatButton.isEnabled = false
+            
+        } else if buttonTag == 3 {
+            let washButtonRed = UIImage(named: "washR")
+            originViewControllerPM?.washButton.setImage(washButtonRed, for: .normal)
+            originViewControllerPM?.washButton.isEnabled = false
+            
+        } else if buttonTag == 4 {
+            let getDressedBButtonRed = UIImage(named: "getDressedR")
+            originViewControllerPM?.getDressedButton.setImage(getDressedBButtonRed, for: .normal)
+            originViewControllerPM?.getDressedButton.isEnabled = false
+            
+        } else if buttonTag == 5 {
+            let eatButtonRed = UIImage(named: "eatR")
+            originViewControllerPM?.eatButton.setImage(eatButtonRed, for: .normal)
+            originViewControllerPM?.eatButton.isEnabled = false
         }
         navigationController?.popViewController(animated: true)
         dismiss(animated: true) {}
     }
     
-}
-    
-    
-    
-    
-    
-    
-    
-    
-    
     /*
+     func  delateScreen () {
+     
+     let washButtonWhite = UIImage(named: "washB")
+     originViewControllerAM?.washButton.setImage(washButtonWhite, for: .normal)
+     originViewControllerAM?.washButton.isEnabled = true
+     
+     navigationController?.popViewController(animated: true)
+     dismiss(animated: true) {}
+     }
+     */
     
     
-    func goBackToViewController1() {
-        /// Revenir à ViewController1
-        navigationController?.popViewController(animated: true)
-        /// Modifier le visuel du bouton dans ViewController1
-        if navigationController?.viewControllers.first is MorningRoutineViewController {
-            //  viewController1.updateButtonVisual()
-        }
-    }
-    
- 
-    
-    func fonctionALancer() {
-        // Afficher une boîte de dialogue de confirmation
-        let alertController = UIAlertController(title: "Confirmation", message: "Voulez-vous valider ?", preferredStyle: .alert)
-        let yesAction = UIAlertAction(title: "Oui", style: .default) { (action) in
-            // Mettre à jour le visuel du bouton
-            self.stopButton.setTitle("Validé", for: .normal)
-            self.stopButton.backgroundColor = UIColor.green // Changez la couleur de fond du bouton si nécessaire
-            // Vous pouvez également effectuer d'autres modifications visuelles ici
-        }
-        let noAction = UIAlertAction(title: "Non", style: .cancel, handler: nil)
-        alertController.addAction(yesAction)
-        alertController.addAction(noAction)
-        present(alertController, animated: true, completion: nil)
-    }
-   
-  
-    private func checkPetStatus(_ routineResult: RoutineResult) {
-        switch routineResult.status {
-        case .accepted:
-            print("accepte")
-            //  performSegue(withIdentifier: segueToTimer, sender: pet)
-        case .rejected(_):
-            print("reject")
-        }
-    }
-    
-    private func createPetObject() -> RoutineResult {
-        let validWashRoutine = true
-        return RoutineResult(validWashRoutine: validWashRoutine)
-    }
-    */
-
-    
-
-
-
-
+}

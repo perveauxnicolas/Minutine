@@ -11,7 +11,13 @@ class ResultRoutineTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     @IBOutlet weak var jourLabel: UILabel!
-    @IBOutlet weak var washAM: UIImageView!
+    @IBOutlet weak var washAMLabel: UILabel!
+    @IBOutlet weak var washPMLabel: UILabel!
+    @IBOutlet weak var getDressAMLabel: UILabel!
+    @IBOutlet weak var getDressPMLabel: UILabel!
+    @IBOutlet weak var eatAMLabel: UILabel!
+    @IBOutlet weak var eatPMLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,12 +29,13 @@ class ResultRoutineTableViewCell: UITableViewCell {
     // MARK: - Properties
     var routineEntity: RoutineEntity? {
         didSet {
-            
-        //    jourLabel.text = RoutineEntity?.title
-       //     ingredientsFavoriteLabel.text = recipeEntity?.ingredients
-       //     yieldFavoriteLabel.text = String(recipeEntity?.yield ?? 0)
-       //     timeFavoriteLabel.text = Int(recipeEntity?.time ?? 0).formatToStringTime
-       //     FavoriteImageView.load(urlImageString: recipeEntity?.image ?? "ImageDefault1024x768" + ".jpg")
+            jourLabel.text = routineEntity?.day
+            washAMLabel.text = routineEntity?.validWashRoutineAM
+            washPMLabel.text = routineEntity?.validWashRoutinePM
+            getDressAMLabel.text = routineEntity?.validGetDressedRoutineAM
+            getDressPMLabel.text = routineEntity?.validGetDressedRoutinePM
+            eatAMLabel.text = routineEntity?.validEatRoutineAM
+            eatPMLabel.text = routineEntity?.validEatRoutinePM
         }
     }
 }

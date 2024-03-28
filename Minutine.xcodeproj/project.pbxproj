@@ -10,33 +10,28 @@
 		8B3BC1762BAAF20B00F23DBD /* MorningRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BC1752BAAF20B00F23DBD /* MorningRoutineViewController.swift */; };
 		8B3BC1782BAAF2C800F23DBD /* EveningRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3BC1772BAAF2C800F23DBD /* EveningRoutineViewController.swift */; };
 		8B97554E2BAC9E550026B111 /* RoutineResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B97554D2BAC9E550026B111 /* RoutineResult.swift */; };
-		8B9755522BAC9F6E0026B111 /* Minutine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755502BAC9F6E0026B111 /* Minutine.xcdatamodeld */; };
 		8B9755542BAC9F970026B111 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755532BAC9F970026B111 /* CoreDataStack.swift */; };
 		8B9755562BAC9FBF0026B111 /* CoreDataSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755552BAC9FBF0026B111 /* CoreDataSetting.swift */; };
 		8B9755582BACA5710026B111 /* UIViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755572BACA5710026B111 /* UIViewController+Helpers.swift */; };
 		8B97555A2BACAF000026B111 /* TimerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9755592BACAF000026B111 /* TimerSetting.swift */; };
 		8BC8FD2F2BAAFF1B004DC3CE /* RoutineTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC8FD2E2BAAFF1B004DC3CE /* RoutineTimerViewController.swift */; };
+		8BD047312BB5CCAA008AA8D2 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8BD047302BB5CCAA008AA8D2 /* FirebaseAnalytics */; };
+		8BD047332BB5D6A9008AA8D2 /* MockCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD047322BB5D6A9008AA8D2 /* MockCoreDataStack.swift */; };
+		8BD047352BB5D713008AA8D2 /* CoreDataSettingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD047342BB5D713008AA8D2 /* CoreDataSettingTests.swift */; };
+		8BD047372BB5DA63008AA8D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BD047362BB5DA63008AA8D2 /* GoogleService-Info.plist */; };
 		8BDC2E7A2BB44137001B344E /* ResultRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC2E792BB44137001B344E /* ResultRoutineViewController.swift */; };
 		8BDC2E7C2BB4715D001B344E /* ResultRoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC2E7B2BB4715D001B344E /* ResultRoutineTableViewCell.swift */; };
+		8BDC2E802BB5B1E5001B344E /* Minutine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BDC2E7E2BB5B1E5001B344E /* Minutine.xcdatamodeld */; };
 		8BE5E6182BA352D40015E411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E6172BA352D40015E411 /* AppDelegate.swift */; };
 		8BE5E61A2BA352D40015E411 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E6192BA352D40015E411 /* SceneDelegate.swift */; };
 		8BE5E61F2BA352D40015E411 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E61D2BA352D40015E411 /* Main.storyboard */; };
 		8BE5E6212BA352D70015E411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E6202BA352D70015E411 /* Assets.xcassets */; };
 		8BE5E6242BA352D70015E411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E6222BA352D70015E411 /* LaunchScreen.storyboard */; };
 		8BE5E62F2BA352D70015E411 /* MinutineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E62E2BA352D70015E411 /* MinutineTests.swift */; };
-		8BE5E6392BA352D70015E411 /* MinutineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E6382BA352D70015E411 /* MinutineUITests.swift */; };
-		8BE5E63B2BA352D70015E411 /* MinutineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E63A2BA352D70015E411 /* MinutineUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		8BE5E62B2BA352D70015E411 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BE5E60C2BA352D40015E411 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8BE5E6132BA352D40015E411;
-			remoteInfo = Minutine;
-		};
-		8BE5E6352BA352D70015E411 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8BE5E60C2BA352D40015E411 /* Project object */;
 			proxyType = 1;
@@ -49,14 +44,17 @@
 		8B3BC1752BAAF20B00F23DBD /* MorningRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningRoutineViewController.swift; sourceTree = "<group>"; };
 		8B3BC1772BAAF2C800F23DBD /* EveningRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EveningRoutineViewController.swift; sourceTree = "<group>"; };
 		8B97554D2BAC9E550026B111 /* RoutineResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineResult.swift; sourceTree = "<group>"; };
-		8B9755512BAC9F6E0026B111 /* Minutine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Minutine.xcdatamodel; sourceTree = "<group>"; };
 		8B9755532BAC9F970026B111 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		8B9755552BAC9FBF0026B111 /* CoreDataSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSetting.swift; sourceTree = "<group>"; };
 		8B9755572BACA5710026B111 /* UIViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Helpers.swift"; sourceTree = "<group>"; };
 		8B9755592BACAF000026B111 /* TimerSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSetting.swift; sourceTree = "<group>"; };
 		8BC8FD2E2BAAFF1B004DC3CE /* RoutineTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTimerViewController.swift; sourceTree = "<group>"; };
+		8BD047322BB5D6A9008AA8D2 /* MockCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataStack.swift; sourceTree = "<group>"; };
+		8BD047342BB5D713008AA8D2 /* CoreDataSettingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSettingTests.swift; sourceTree = "<group>"; };
+		8BD047362BB5DA63008AA8D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BDC2E792BB44137001B344E /* ResultRoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRoutineViewController.swift; sourceTree = "<group>"; };
 		8BDC2E7B2BB4715D001B344E /* ResultRoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultRoutineTableViewCell.swift; sourceTree = "<group>"; };
+		8BDC2E7F2BB5B1E5001B344E /* Minutine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Minutine.xcdatamodel; sourceTree = "<group>"; };
 		8BE5E6142BA352D40015E411 /* Minutine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minutine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5E6172BA352D40015E411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BE5E6192BA352D40015E411 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +64,6 @@
 		8BE5E6252BA352D70015E411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BE5E62A2BA352D70015E411 /* MinutineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinutineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5E62E2BA352D70015E411 /* MinutineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutineTests.swift; sourceTree = "<group>"; };
-		8BE5E6342BA352D70015E411 /* MinutineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinutineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BE5E6382BA352D70015E411 /* MinutineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutineUITests.swift; sourceTree = "<group>"; };
-		8BE5E63A2BA352D70015E411 /* MinutineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,17 +71,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD047312BB5CCAA008AA8D2 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8BE5E6272BA352D70015E411 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BE5E6312BA352D70015E411 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -107,7 +96,7 @@
 		8B3BC1712BAAEE2400F23DBD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8B97554F2BAC9F0A0026B111 /* CoreData */,
+				8BDC2E7D2BB5B1C6001B344E /* CoreDataStack */,
 				8B97554D2BAC9E550026B111 /* RoutineResult.swift */,
 				8B9755592BACAF000026B111 /* TimerSetting.swift */,
 			);
@@ -145,14 +134,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8B97554F2BAC9F0A0026B111 /* CoreData */ = {
+		8BDC2E7D2BB5B1C6001B344E /* CoreDataStack */ = {
 			isa = PBXGroup;
 			children = (
-				8B9755502BAC9F6E0026B111 /* Minutine.xcdatamodeld */,
+				8BDC2E7E2BB5B1E5001B344E /* Minutine.xcdatamodeld */,
 				8B9755532BAC9F970026B111 /* CoreDataStack.swift */,
 				8B9755552BAC9FBF0026B111 /* CoreDataSetting.swift */,
 			);
-			path = CoreData;
+			path = CoreDataStack;
 			sourceTree = "<group>";
 		};
 		8BE5E60B2BA352D40015E411 = {
@@ -160,7 +149,6 @@
 			children = (
 				8BE5E6162BA352D40015E411 /* Minutine */,
 				8BE5E62D2BA352D70015E411 /* MinutineTests */,
-				8BE5E6372BA352D70015E411 /* MinutineUITests */,
 				8BE5E6152BA352D40015E411 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -170,7 +158,6 @@
 			children = (
 				8BE5E6142BA352D40015E411 /* Minutine.app */,
 				8BE5E62A2BA352D70015E411 /* MinutineTests.xctest */,
-				8BE5E6342BA352D70015E411 /* MinutineUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +165,7 @@
 		8BE5E6162BA352D40015E411 /* Minutine */ = {
 			isa = PBXGroup;
 			children = (
+				8BD047362BB5DA63008AA8D2 /* GoogleService-Info.plist */,
 				8BE5E6252BA352D70015E411 /* Info.plist */,
 				8B3BC1702BAAEE0D00F23DBD /* Extensions */,
 				8B3BC1712BAAEE2400F23DBD /* Model */,
@@ -192,17 +180,10 @@
 			isa = PBXGroup;
 			children = (
 				8BE5E62E2BA352D70015E411 /* MinutineTests.swift */,
+				8BD047322BB5D6A9008AA8D2 /* MockCoreDataStack.swift */,
+				8BD047342BB5D713008AA8D2 /* CoreDataSettingTests.swift */,
 			);
 			path = MinutineTests;
-			sourceTree = "<group>";
-		};
-		8BE5E6372BA352D70015E411 /* MinutineUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8BE5E6382BA352D70015E411 /* MinutineUITests.swift */,
-				8BE5E63A2BA352D70015E411 /* MinutineUITestsLaunchTests.swift */,
-			);
-			path = MinutineUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +202,9 @@
 			dependencies = (
 			);
 			name = Minutine;
+			packageProductDependencies = (
+				8BD047302BB5CCAA008AA8D2 /* FirebaseAnalytics */,
+			);
 			productName = Minutine;
 			productReference = 8BE5E6142BA352D40015E411 /* Minutine.app */;
 			productType = "com.apple.product-type.application";
@@ -243,24 +227,6 @@
 			productReference = 8BE5E62A2BA352D70015E411 /* MinutineTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8BE5E6332BA352D70015E411 /* MinutineUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8BE5E6442BA352D70015E411 /* Build configuration list for PBXNativeTarget "MinutineUITests" */;
-			buildPhases = (
-				8BE5E6302BA352D70015E411 /* Sources */,
-				8BE5E6312BA352D70015E411 /* Frameworks */,
-				8BE5E6322BA352D70015E411 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8BE5E6362BA352D70015E411 /* PBXTargetDependency */,
-			);
-			name = MinutineUITests;
-			productName = MinutineUITests;
-			productReference = 8BE5E6342BA352D70015E411 /* MinutineUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,10 +244,6 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 8BE5E6132BA352D40015E411;
 					};
-					8BE5E6332BA352D70015E411 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 8BE5E6132BA352D40015E411;
-					};
 				};
 			};
 			buildConfigurationList = 8BE5E60F2BA352D40015E411 /* Build configuration list for PBXProject "Minutine" */;
@@ -293,13 +255,15 @@
 				Base,
 			);
 			mainGroup = 8BE5E60B2BA352D40015E411;
+			packageReferences = (
+				8BD0472F2BB5CCAA008AA8D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 8BE5E6152BA352D40015E411 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8BE5E6132BA352D40015E411 /* Minutine */,
 				8BE5E6292BA352D70015E411 /* MinutineTests */,
-				8BE5E6332BA352D70015E411 /* MinutineUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,19 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BE5E6242BA352D70015E411 /* LaunchScreen.storyboard in Resources */,
+				8BD047372BB5DA63008AA8D2 /* GoogleService-Info.plist in Resources */,
 				8BE5E6212BA352D70015E411 /* Assets.xcassets in Resources */,
 				8BE5E61F2BA352D40015E411 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8BE5E6282BA352D70015E411 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BE5E6322BA352D70015E411 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,12 +301,12 @@
 				8BE5E61A2BA352D40015E411 /* SceneDelegate.swift in Sources */,
 				8B97555A2BACAF000026B111 /* TimerSetting.swift in Sources */,
 				8BC8FD2F2BAAFF1B004DC3CE /* RoutineTimerViewController.swift in Sources */,
-				8B9755522BAC9F6E0026B111 /* Minutine.xcdatamodeld in Sources */,
 				8BDC2E7C2BB4715D001B344E /* ResultRoutineTableViewCell.swift in Sources */,
 				8BDC2E7A2BB44137001B344E /* ResultRoutineViewController.swift in Sources */,
 				8B97554E2BAC9E550026B111 /* RoutineResult.swift in Sources */,
 				8B9755582BACA5710026B111 /* UIViewController+Helpers.swift in Sources */,
 				8B9755542BAC9F970026B111 /* CoreDataStack.swift in Sources */,
+				8BDC2E802BB5B1E5001B344E /* Minutine.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,15 +315,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BE5E62F2BA352D70015E411 /* MinutineTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BE5E6302BA352D70015E411 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8BE5E63B2BA352D70015E411 /* MinutineUITestsLaunchTests.swift in Sources */,
-				8BE5E6392BA352D70015E411 /* MinutineUITests.swift in Sources */,
+				8BD047352BB5D713008AA8D2 /* CoreDataSettingTests.swift in Sources */,
+				8BD047332BB5D6A9008AA8D2 /* MockCoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,11 +327,6 @@
 			isa = PBXTargetDependency;
 			target = 8BE5E6132BA352D40015E411 /* Minutine */;
 			targetProxy = 8BE5E62B2BA352D70015E411 /* PBXContainerItemProxy */;
-		};
-		8BE5E6362BA352D70015E411 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8BE5E6132BA352D40015E411 /* Minutine */;
-			targetProxy = 8BE5E6352BA352D70015E411 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -621,42 +567,6 @@
 			};
 			name = Release;
 		};
-		8BE5E6452BA352D70015E411 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6ASXC36M59;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = perveaux.MinutineUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Minutine;
-			};
-			name = Debug;
-		};
-		8BE5E6462BA352D70015E411 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6ASXC36M59;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = perveaux.MinutineUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Minutine;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -687,24 +597,34 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BE5E6442BA352D70015E411 /* Build configuration list for PBXNativeTarget "MinutineUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8BE5E6452BA352D70015E411 /* Debug */,
-				8BE5E6462BA352D70015E411 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		8BD0472F2BB5CCAA008AA8D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BD047302BB5CCAA008AA8D2 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BD0472F2BB5CCAA008AA8D2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
+
 /* Begin XCVersionGroup section */
-		8B9755502BAC9F6E0026B111 /* Minutine.xcdatamodeld */ = {
+		8BDC2E7E2BB5B1E5001B344E /* Minutine.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8B9755512BAC9F6E0026B111 /* Minutine.xcdatamodel */,
+				8BDC2E7F2BB5B1E5001B344E /* Minutine.xcdatamodel */,
 			);
-			currentVersion = 8B9755512BAC9F6E0026B111 /* Minutine.xcdatamodel */;
+			currentVersion = 8BDC2E7F2BB5B1E5001B344E /* Minutine.xcdatamodel */;
 			path = Minutine.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

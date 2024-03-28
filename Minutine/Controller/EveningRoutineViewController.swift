@@ -12,8 +12,6 @@ class EveningRoutineViewController: UIViewController {
     // MARK: - Properties
     // MARK: - Properties
     private let segueToTimer2 = "segueToTimer2"
-    let timerSetting = TimerSetting()
-    
     
     // MARK: - Outlets
     @IBOutlet weak var washButton: UIButton!
@@ -28,30 +26,26 @@ class EveningRoutineViewController: UIViewController {
     // MARK: - Actions
     @IBAction func tapeWashButton(_ sender: UIButton) {
         performSegue(withIdentifier: self.segueToTimer2, sender: sender.tag)
-      //  getTimer()
     }
     
     @IBAction func tapeGetDressedButton(_ sender: UIButton) {
-        getTimer()
-        // simpleCalc.addNewNumber(sender.tag)
-
+        performSegue(withIdentifier: self.segueToTimer2, sender: sender.tag)
     }
     
     @IBAction func tapeEatButton(_ sender: UIButton) {
-        getTimer()
+        performSegue(withIdentifier: self.segueToTimer2, sender: sender.tag)
     }
     
-    private func getTimer() {
-        self.performSegue(withIdentifier: self.segueToTimer2, sender: self)
-    }
 }
 
 // MARK: - Navigation
 extension EveningRoutineViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueToTimer2 {
-            //  guard let listRoutineVC = segue.destination as? EveningRoutineViewController else { return }
-            //  listRoutineVC.RoutineList = RoutineList
+            if let routineTimerVC2 = segue.destination as? RoutineTimerViewController, let tag = sender as? Int {
+                routineTimerVC2.buttonTag = tag
+                routineTimerVC2.originViewControllerPM = self
+            }
         }
     }
 }

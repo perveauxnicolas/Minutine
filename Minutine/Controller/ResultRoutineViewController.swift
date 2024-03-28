@@ -13,6 +13,8 @@ final class ResultRoutineViewController: UIViewController {
     private var coreDataSetting: CoreDataSetting?
     private var cellSelected: RoutineDay?
     private let listRoutineCell = "listRoutineCell"
+    let timerSetting = TimerSetting()
+    
     
     // MARK: - Outlets
     @IBOutlet weak var resultRoutineTableView: UITableView!
@@ -25,16 +27,15 @@ final class ResultRoutineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         coreDataFunction()
-      //  configureRecipe()
+        //  configureRecipe()
         addRoutine()
-
     }
     
- /*   @IBAction func ResetButton(_ sender: UIBarButtonItem) {
-        coreDataSetting?.deleteAllRecipes()
-        resultRoutineTableView.reloadData()
-    }*/
-    
+    @IBAction func tapedResetButton(_ sender: UIBarButtonItem) {
+        // timerSetting.updateButtonAppearance()
+        //   coreDataSetting?.deleteRoutine()
+        //   resultRoutineTableView.reloadData()
+    }
     
     // MARK: - Privates
     private  func coreDataFunction() {
@@ -42,45 +43,41 @@ final class ResultRoutineViewController: UIViewController {
     }
     
     private func addRoutine() {
-  //      guard let label = cellSelected?.routine.label else { return }
-     //   guard let ingredients = cellule?.recipe.ingredientLines.joined(separator: "\n" + "- ") else { return }
-     //   guard let yield = cellule?.recipe.yield else { return }
-     //   let totalTime = Int16(cellule?.recipe.totalTime ?? 0)
-     //   guard let image = cellule?.recipe.image else { return }
-     //   guard let url = cellule?.recipe.url else { return }
+        guard let day = cellSelected?.routine.day else {return}
+        guard let validEatRoutineAM = cellSelected?.routine.validEatRoutineAM else { return }
+        guard let validWashRoutineAM = cellSelected?.routine.validWashRoutineAM else { return }
+        guard let validGetDressedRoutineAM = cellSelected?.routine.validGetDressedRoutineAM else { return }
+        guard let validEatRoutinePM = cellSelected?.routine.validEatRoutinePM else { return }
+        guard let validWashRoutinePM = cellSelected?.routine.validWashRoutinePM else { return }
+        guard let validGetDressedRoutinePM = cellSelected?.routine.validGetDressedRoutinePM else { return }
         
-      //  coreDataSetting?.createRoutine(validWashRoutine: Bool)
+        coreDataSetting?.createRoutine(day: day, validEatRoutineAM: validEatRoutineAM, validWashRoutineAM: validWashRoutineAM, validGetDressedRoutineAM: validGetDressedRoutineAM, validEatRoutinePM: validEatRoutinePM, validWashRoutinePM: validWashRoutinePM, validGetDressedRoutinePM: validGetDressedRoutinePM)
     }
-   
-    
-    
 }
-   
-    // MARK: - UITableViewDataSource
-    extension ResultRoutineViewController: UITableViewDataSource {
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return coreDataSetting?.routines.count ?? 0
-        }
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            guard let listRoutineCell = tableView.dequeueReusableCell(
-                withIdentifier: listRoutineCell,
-                for: indexPath) as? ResultRoutineTableViewCell else {
-                return UITableViewCell()
-            }
-            let routine = coreDataSetting?.routines[indexPath.row]
-            listRoutineCell.routineEntity = routine
-            return listRoutineCell
-        }
-        
-  //      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-  //          self.cellSelected = coreDataSetting?.routines[indexPath.row]
-   //         performSegue(withIdentifier: self.segueToRecipeDetailFavorite, sender: self)
-   //     }
-    }
 
+
+
+
+
+// MARK: - UITableViewDataSource
+extension ResultRoutineViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return coreDataSetting?.routines.count ?? 0
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let listRoutineCell = tableView.dequeueReusableCell(
+            withIdentifier: listRoutineCell,
+            for: indexPath) as? ResultRoutineTableViewCell else {
+            return UITableViewCell()
+        }
+        let routine = coreDataSetting?.routines[indexPath.row]
+        listRoutineCell.routineEntity = routine
+        return listRoutineCell
+    }
+}
 
 extension ResultRoutineViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -95,17 +92,22 @@ extension ResultRoutineViewController: UITableViewDelegate {
         return coreDataSetting?.routines.isEmpty ?? true ? 300 : 0
     }
 }
-// MARK: - Navigation
-extension ResultRoutineViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == listRoutineCell {
-         //   guard let listRoutineCellVC = segue.destination
-         //           as? FavoriteViewController else { return }
-         //   listRoutineCellVC.cellule = self.cellSelected
-        }
-    }
-}
 
-    
-    
+
+
+/*
+ 
+ // MARK: - EXTENSION
+ //Using extension with protocol(Model) to delegate, in order to manage alerts and update the display, to the model
+ extension ResultRoutineViewController: ModelDelegate {
+ func delegateFunction() {
+ }
+ 
+ //  func updateTextView(label: String) {
+ //      textView.text = label
+ //  }
+ }
+ */
+
+
 
