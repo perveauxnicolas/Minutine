@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - RoutineResult
 struct RoutineResult {
-    var routineDays : [RoutineDay]
+    var routineDays: [RoutineDay]
 }
 // MARK: - RoutineDay
 struct RoutineDay {

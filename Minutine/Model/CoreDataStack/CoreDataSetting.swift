@@ -29,6 +29,33 @@ final class CoreDataSetting {
     
     // MARK: - Manage Task Entity
     
+    func saveToCoreData(routineResult: RoutineResult) {
+        let managedContext = coreDataStack.mainContext
+        
+        for routineDay in routineResult.routineDays {
+            let routineEntity = RoutineEntity(context: managedContext)
+            let routine = routineDay.routine
+            
+            routineEntity.day = routine.day
+            routineEntity.validWashRoutineAM = routine.validWashRoutineAM
+            routineEntity.validGetDressedRoutineAM = routine.validGetDressedRoutineAM
+            routineEntity.validEatRoutineAM = routine.validEatRoutineAM
+            routineEntity.validWashRoutinePM = routine.validWashRoutinePM
+            routineEntity.validGetDressedRoutinePM = routine.validGetDressedRoutinePM
+            routineEntity.validEatRoutinePM = routine.validEatRoutinePM
+        }
+        coreDataStack.saveContext()
+    }
+    
+    
+    func deleteRoutines() {
+        routines.forEach { managedObjectContext.delete($0) }
+        coreDataStack.saveContext()
+    }
+}
+    
+    /*
+    
     func createRoutine(day: String,validEatRoutineAM: String, validWashRoutineAM: String,validGetDressedRoutineAM: String,validEatRoutinePM: String,validWashRoutinePM: String,validGetDressedRoutinePM: String) {
         let routine = RoutineEntity(context: managedObjectContext)
         routine.day = day
@@ -40,10 +67,32 @@ final class CoreDataSetting {
         routine.validGetDressedRoutinePM = validGetDressedRoutinePM
         coreDataStack.saveContext()
     }
+    */
+   
 
-    func deleteRoutine() {
-        routines.forEach { managedObjectContext.delete($0) }
-        coreDataStack.saveContext()
-    }
+   /*
+    func saveToCoreData(routineResult: RoutineResult) {
+            let coreDataStack = CoreDataStack(modelName: "Minutine")
+            let managedContext = coreDataStack.mainContext
+            
+            for routineDay in routineResult.routineDays {
+                let entity = NSEntityDescription.entity(forEntityName: "RoutineEntity", in: managedContext)!
+                let routineObject = NSManagedObject(entity: entity, insertInto: managedContext)
+                
+                let routine = routineDay.routine
+                
+                routineObject.setValue(routine.day, forKey: "day")
+                routineObject.setValue(routine.validWashRoutineAM, forKey: "validWashRoutineAM")
+                routineObject.setValue(routine.validGetDressedRoutineAM, forKey: "validGetDressedRoutineAM")
+                routineObject.setValue(routine.validEatRoutineAM, forKey: "validEatRoutineAM")
+                routineObject.setValue(routine.validWashRoutinePM, forKey: "validWashRoutinePM")
+                routineObject.setValue(routine.validGetDressedRoutinePM, forKey: "validGetDressedRoutinePM")
+                routineObject.setValue(routine.validEatRoutinePM, forKey: "validEatRoutinePM")
+            }
+            
+            coreDataStack.saveContext()
+        }
+    */
     
-}
+    
+

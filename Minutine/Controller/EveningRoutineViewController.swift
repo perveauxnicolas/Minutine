@@ -10,8 +10,9 @@ import UIKit
 class EveningRoutineViewController: UIViewController {
     
     // MARK: - Properties
-    // MARK: - Properties
     private let segueToTimer2 = "segueToTimer2"
+    let timerSetting = TimerSetting()
+
     
     // MARK: - Outlets
     @IBOutlet weak var washButton: UIButton!
@@ -21,6 +22,7 @@ class EveningRoutineViewController: UIViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        timerSetting.timerSettingDelegate = self
     }
     
     // MARK: - Actions
@@ -44,8 +46,23 @@ extension EveningRoutineViewController {
         if segue.identifier == segueToTimer2 {
             if let routineTimerVC2 = segue.destination as? RoutineTimerViewController, let tag = sender as? Int {
                 routineTimerVC2.buttonTag = tag
-                routineTimerVC2.originViewControllerPM = self
+           //     routineTimerVC2.originViewControllerPM = self
             }
         }
+    }
+}
+
+extension EveningRoutineViewController: TimerSettingDelegate {
+    func didUpdateWashButton(image: UIImage?) {
+        washButton.setImage(image, for: .normal)
+        washButton.isEnabled = false
+    }
+    func didUpdateGetDressedButton(image: UIImage?) {
+        getDressedButton.setImage(image, for: .normal)
+        getDressedButton.isEnabled = false
+    }
+    func didUpdateEatButtonGreen(image: UIImage?) {
+        eatButton.setImage(image, for: .normal)
+        eatButton.isEnabled = false
     }
 }

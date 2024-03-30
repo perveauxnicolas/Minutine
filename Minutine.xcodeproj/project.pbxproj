@@ -28,6 +28,7 @@
 		8BE5E6212BA352D70015E411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E6202BA352D70015E411 /* Assets.xcassets */; };
 		8BE5E6242BA352D70015E411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E6222BA352D70015E411 /* LaunchScreen.storyboard */; };
 		8BE5E62F2BA352D70015E411 /* MinutineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E62E2BA352D70015E411 /* MinutineTests.swift */; };
+		8BFF3EB02BB88EB800D120EC /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFF3EAF2BB88EB800D120EC /* UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		8BE5E6252BA352D70015E411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BE5E62A2BA352D70015E411 /* MinutineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinutineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5E62E2BA352D70015E411 /* MinutineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutineTests.swift; sourceTree = "<group>"; };
+		8BFF3EAF2BB88EB800D120EC /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				8B9755572BACA5710026B111 /* UIViewController+Helpers.swift */,
+				8BFF3EAF2BB88EB800D120EC /* UITableViewCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,8 +168,8 @@
 		8BE5E6162BA352D40015E411 /* Minutine */ = {
 			isa = PBXGroup;
 			children = (
-				8BD047362BB5DA63008AA8D2 /* GoogleService-Info.plist */,
 				8BE5E6252BA352D70015E411 /* Info.plist */,
+				8BD047362BB5DA63008AA8D2 /* GoogleService-Info.plist */,
 				8B3BC1702BAAEE0D00F23DBD /* Extensions */,
 				8B3BC1712BAAEE2400F23DBD /* Model */,
 				8B3BC1722BAAEE3A00F23DBD /* Controller */,
@@ -299,6 +302,7 @@
 				8B9755562BAC9FBF0026B111 /* CoreDataSetting.swift in Sources */,
 				8B3BC1782BAAF2C800F23DBD /* EveningRoutineViewController.swift in Sources */,
 				8BE5E61A2BA352D40015E411 /* SceneDelegate.swift in Sources */,
+				8BFF3EB02BB88EB800D120EC /* UITableViewCell.swift in Sources */,
 				8B97555A2BACAF000026B111 /* TimerSetting.swift in Sources */,
 				8BC8FD2F2BAAFF1B004DC3CE /* RoutineTimerViewController.swift in Sources */,
 				8BDC2E7C2BB4715D001B344E /* ResultRoutineTableViewCell.swift in Sources */,
@@ -483,8 +487,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,8 +517,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

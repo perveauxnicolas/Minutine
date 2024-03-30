@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class RoutineTimerViewController: UIViewController {
     
     // MARK: - Properties
@@ -19,8 +21,6 @@ class RoutineTimerViewController: UIViewController {
     var originViewControllerPM: EveningRoutineViewController?
     var buttonTag: Int?
     
-    //   var myRoutine = Routine(day: "", validWashRoutineAM: "", validGetDressedRoutineAM: "", validEatRoutineAM: "", validWashRoutinePM: "", validGetDressedRoutinePM: "", validEatRoutinePM: "")
-    
     
     // MARK: - Outlets
     @IBOutlet weak var stopButton: UIButton!
@@ -30,18 +30,38 @@ class RoutineTimerViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(displayP3Red: 44/255, green: 62/255, blue: 80/255, alpha: 1)
         setupTimerAnimation(timerLayer: timerLayer, timerLayerFond: timerLayerFond)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [weak self] in         ///  to return to ViewController1 after 5 seconds
-            self?.returnFailedToMorningRoutineViewController()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { [weak self] in   ///  to return to ViewController1 after 5 seconds
+     //       self?.returnFailedToMorningRoutineViewController()
+            self?.echecRoutine()
         }
     }
     
     // MARK: - Actions
     @IBAction func tapeditsdoneButton(_ sender: Any) {
-        //   validRoutine(validated: true)
-        returnSuccesToMorningRoutineViewController()
+               getRoutine()
+        
     }
     
     // MARK: - Methods
+    
+    func getRoutine(){
+        timerSetting.returnSucces(buttonTag: buttonTag ?? 10)
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true) {}
+    }
+    func echecRoutine (){
+    timerSetting.returnFailed(buttonTag: buttonTag ?? 10)
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true) {} /// Revenir à ViewController1
+    }
+    
+  
+    
+    
+    
+    
+    
+    
     
     /*  func addDay() {
      if myRoutine.day.isEmpty {
@@ -69,7 +89,7 @@ class RoutineTimerViewController: UIViewController {
     
     
     
-    func returnSuccesToMorningRoutineViewController() {
+  /*  func returnSuccesToMorningRoutineViewController(buttonTag: Int) {
         var routine = Routine(day: "", validWashRoutineAM: "", validGetDressedRoutineAM: "", validEatRoutineAM: "", validWashRoutinePM: "", validGetDressedRoutinePM: "", validEatRoutinePM: "")
         routine.day = "lundi"
         
@@ -118,12 +138,11 @@ class RoutineTimerViewController: UIViewController {
             originViewControllerPM?.eatButton.setImage(eatButtonGreen, for: .normal)
             originViewControllerPM?.eatButton.isEnabled = false
         }
-        //  saveRoutine()
         
         navigationController?.popViewController(animated: true)
         dismiss(animated: true) {}
-    }
-    
+    } */
+    /*
     func returnFailedToMorningRoutineViewController() {
         print("Tag du bouton reçu : \(buttonTag ?? 10)")
         
@@ -160,7 +179,7 @@ class RoutineTimerViewController: UIViewController {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true) {}
     }
-    
+    */
     /*
      func  delateScreen () {
      

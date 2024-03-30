@@ -5,7 +5,6 @@
 //  Created by Perveaux Nicolas on 21/03/2024.
 //
 
-
 import Foundation
 import CoreData
 
