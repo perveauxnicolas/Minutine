@@ -9,16 +9,12 @@ import UIKit
 
 // MARK: - Extension to manage TimerAnimation
 
-
 extension UIViewController  {
-   
+    
     func setupTimerAnimation( timerLayer: CAShapeLayer,timerLayerFond: CAShapeLayer) {
         let center = view.center
         let circularPath = UIBezierPath(arcCenter: center, radius: 75, startAngle: -CGFloat.pi/2, endAngle: 2*CGFloat.pi-CGFloat.pi/2, clockwise: true)
         let circularPathFond = UIBezierPath(arcCenter: center, radius: 75, startAngle: -CGFloat.pi/2, endAngle: 2*CGFloat.pi-CGFloat.pi/2, clockwise: true)
-        
-   /*     let radius: CGFloat = 75.0
-              let circularPath = UIBezierPath(arcCenter: center, radius: radius, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi - CGFloat.pi / 2, clockwise: true)*/
         
         timerLayerFond.path = circularPathFond.cgPath
         timerLayerFond.lineWidth = 150
@@ -46,41 +42,4 @@ extension UIViewController  {
         timerLayer.add(animation, forKey: "timerAnimation")
     }
     
-    func stopTimerAnimation(timerLayer: CAShapeLayer) {
-        timerLayer.removeAnimation(forKey: "timerAnimation")
-    }
-    
-    func buttonHidden(shown: Bool, button1: UIButton,button2: UIButton) {
-        button1.isHidden = shown
-        button2.isHidden = !shown
-    }
-    
-    
-    enum StateOfTime {
-        case timeIsOver
-        case timeisInProgress
-    }
-    // Alert message to user
-    func presentAlertTime (typeAlert: StateOfTime) {
-        var message: String
-        var title: String
-        
-        switch typeAlert {
-        case .timeIsOver:
-            title = "Dommage"
-            message = "désolé le temps est fini..."
-            
-        case .timeisInProgress:
-            title = "Super"
-            message = "Tu as réussi!"
-        }
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    }
-    
-    
-    
-   
 }

@@ -13,7 +13,7 @@
                 <navigationController id="ggF-Xp-qIa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="lune" id="52s-eE-ksi">
                         <inset key="imageInsets" minX="40" minY="40" maxX="40" maxY="40"/>
-                        <inset key="landscapeImageInsets" minX="40" minY="40" maxX="40" maxY="40"/>
+                        <inset key="landscapeImageInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RMO-hw-ufp">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -103,11 +103,14 @@
             </objects>
             <point key="canvasLocation" x="1595" y="130"/>
         </scene>
-        <!--resultat-->
+        <!--Navigation Controller-->
         <scene sceneID="8g4-Oz-YIS">
             <objects>
                 <navigationController id="AeL-XV-Qbt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="resultat" id="8j7-c5-97p"/>
+                    <tabBarItem key="tabBarItem" title="" image="trueFalse" id="8j7-c5-97p">
+                        <inset key="imageInsets" minX="40" minY="40" maxX="40" maxY="40"/>
+                        <inset key="landscapeImageInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yhd-qj-S6U">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -165,37 +168,37 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se laver" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2r-yW-w1z">
                                                                             <rect key="frame" x="53.333333333333343" y="0.0" width="52.666666666666657" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" red="0.42352941179999998" green="0.75294117650000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="washAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAR-4K-1TU">
                                                                             <rect key="frame" x="106.99999999999999" y="0.0" width="52.333333333333329" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="textColor" red="0.42352941179999998" green="0.75294117650000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s'habiller" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCL-QZ-QMX">
                                                                             <rect key="frame" x="160.33333333333334" y="0.0" width="52.333333333333343" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" red="0.42352941179999998" green="0.75294117650000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="getDressAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssh-mF-UUJ">
                                                                             <rect key="frame" x="213.66666666666666" y="0.0" width="52.333333333333343" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="textColor" red="0.42352941179999998" green="0.75294117650000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manger" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXm-0Y-d8J">
                                                                             <rect key="frame" x="267" y="0.0" width="52.666666666666686" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" red="0.42352941179999998" green="0.75294117650000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eatAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spD-zd-bqz">
                                                                             <rect key="frame" x="320.66666666666669" y="0.0" width="52.333333333333314" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="textColor" red="0.42352941179999998" green="0.75294117650000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -214,37 +217,37 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Se laver" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ky5-6r-eaC">
                                                                             <rect key="frame" x="53.333333333333343" y="0.0" width="52.666666666666657" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" red="0.076554745610000002" green="0.02560664147" blue="0.43965041040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="washPM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1Y-L8-w1Q">
                                                                             <rect key="frame" x="106.99999999999999" y="0.0" width="52.333333333333329" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="textColor" red="0.076554745610000002" green="0.02560664147" blue="0.43965041040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s'habiller" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo8-KE-oGj">
                                                                             <rect key="frame" x="160.33333333333334" y="0.0" width="52.333333333333343" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" red="0.076554745610000002" green="0.02560664147" blue="0.43965041040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="getDressPM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5U-C1-FYQ">
                                                                             <rect key="frame" x="213.66666666666666" y="0.0" width="52.333333333333343" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="textColor" red="0.076554745610000002" green="0.02560664147" blue="0.43965041040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manger" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KU-vF-UJ7">
                                                                             <rect key="frame" x="267" y="0.0" width="52.666666666666686" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" red="0.076554745610000002" green="0.02560664147" blue="0.43965041040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eatAM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5D-Rd-8OJ">
                                                                             <rect key="frame" x="320.66666666666669" y="0.0" width="52.333333333333314" height="20"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="textColor" red="0.076554745610000002" green="0.02560664147" blue="0.43965041040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -294,7 +297,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nYl-ec-Mx5">
-                        <barButtonItem key="rightBarButtonItem" title="Reset" id="fPE-Lu-ztz">
+                        <barButtonItem key="rightBarButtonItem" title="Reset" image="DelateRoutines" id="fPE-Lu-ztz">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="tapedResetButton:" destination="MDv-dt-bkc" id="LgX-aS-r9Y"/>
                             </connections>
@@ -314,7 +318,7 @@
                 <navigationController id="HtG-qo-5aB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="soleil" id="VY9-yC-qpF">
                         <inset key="imageInsets" minX="40" minY="40" maxX="40" maxY="40"/>
-                        <inset key="landscapeImageInsets" minX="40" minY="40" maxX="40" maxY="40"/>
+                        <inset key="landscapeImageInsets" minX="20" minY="20" maxX="20" maxY="20"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ClQ-1S-AdI">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -377,7 +381,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cWg-3X-f1e"/>
@@ -481,11 +485,13 @@
         <segue reference="C4m-yk-Sf2"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="DelateRoutines" width="1023.3333129882812" height="271.33334350585938"/>
         <image name="eatB" width="1024" height="272"/>
         <image name="getDressedB" width="1024" height="273"/>
         <image name="itsdone" width="1023.3333129882812" height="271.33334350585938"/>
         <image name="lune" width="25" height="25"/>
         <image name="soleil" width="25" height="25"/>
+        <image name="trueFalse" width="25" height="25"/>
         <image name="washB" width="1024" height="272"/>
     </resources>
 </document>

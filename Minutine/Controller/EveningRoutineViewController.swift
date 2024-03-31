@@ -12,7 +12,6 @@ class EveningRoutineViewController: UIViewController {
     // MARK: - Properties
     private let segueToTimer2 = "segueToTimer2"
     let timerSetting = TimerSetting()
-
     
     // MARK: - Outlets
     @IBOutlet weak var washButton: UIButton!
@@ -37,7 +36,6 @@ class EveningRoutineViewController: UIViewController {
     @IBAction func tapeEatButton(_ sender: UIButton) {
         performSegue(withIdentifier: self.segueToTimer2, sender: sender.tag)
     }
-    
 }
 
 // MARK: - Navigation
@@ -46,7 +44,6 @@ extension EveningRoutineViewController {
         if segue.identifier == segueToTimer2 {
             if let routineTimerVC2 = segue.destination as? RoutineTimerViewController, let tag = sender as? Int {
                 routineTimerVC2.buttonTag = tag
-           //     routineTimerVC2.originViewControllerPM = self
             }
         }
     }
@@ -61,7 +58,7 @@ extension EveningRoutineViewController: TimerSettingDelegate {
         getDressedButton.setImage(image, for: .normal)
         getDressedButton.isEnabled = false
     }
-    func didUpdateEatButtonGreen(image: UIImage?) {
+    func didUpdateEatButton(image: UIImage?) {
         eatButton.setImage(image, for: .normal)
         eatButton.isEnabled = false
     }

@@ -11,8 +11,8 @@ class MorningRoutineViewController: UIViewController {
     
     // MARK: - Properties
     private let segueToTimer = "segueToTimer"
-    let timerSetting = TimerSetting()
-
+    private let timerSetting = TimerSetting()
+    
     // MARK: - Outlets
     @IBOutlet weak var washButton: UIButton!
     @IBOutlet weak var getDressedButton: UIButton!
@@ -22,6 +22,10 @@ class MorningRoutineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timerSetting.timerSettingDelegate = self  /// Définir ViewController1 comme délégué du modèle Setting
+        // Configurer les images initiales des boutons
+           washButton.setImage(UIImage(named: "washB"), for: .normal)
+           getDressedButton.setImage(UIImage(named: "getDressedB"), for: .normal)
+           eatButton.setImage(UIImage(named: "eatB"), for: .normal)
     }
     
     // MARK: - Actions
@@ -36,7 +40,6 @@ class MorningRoutineViewController: UIViewController {
     @IBAction func tapeEatButton(_ sender: UIButton) {
         performSegue(withIdentifier: self.segueToTimer, sender: sender.tag)
     }
-    
 }
 
 // MARK: - Navigation
@@ -45,7 +48,6 @@ extension MorningRoutineViewController {
         if segue.identifier == segueToTimer {
             if let routineTimerVC = segue.destination as? RoutineTimerViewController, let tag = sender as? Int {
                 routineTimerVC.buttonTag = tag
-            //    routineTimerVC.originViewControllerAM = self   /// Passer une référence à ViewController1 à ViewController2
             }
         }
     }
@@ -61,8 +63,10 @@ extension MorningRoutineViewController: TimerSettingDelegate {
         getDressedButton.setImage(image, for: .normal)
         getDressedButton.isEnabled = false
     }
-    func didUpdateEatButtonGreen(image: UIImage?) {
+    func didUpdateEatButton(image: UIImage?) {
         eatButton.setImage(image, for: .normal)
         eatButton.isEnabled = false
     }
 }
+
+

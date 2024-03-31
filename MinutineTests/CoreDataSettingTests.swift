@@ -8,14 +8,12 @@
 import XCTest
 @testable import Minutine
 
-
 final class CoreDataSettingTests: XCTestCase {
     // MARK: - Properties
     var coreDataStack: MockCoreDataStack!
     var coreDataSetting: CoreDataSetting!
 
     // MARK: - Tests Life Cycle
-
     override func setUp() {
         super.setUp()
         coreDataStack = MockCoreDataStack()
@@ -28,23 +26,30 @@ final class CoreDataSettingTests: XCTestCase {
     }
 
     // MARK: - Tests
-    func testAddRecipeMethods_WhenAnEntityIsCreated_ThenShouldBeCorrectlySaved() {
-        coreDataSetting.createRoutine(day: "jour 1", validEatRoutineAM: "Validé", validWashRoutineAM: "Validé", validGetDressedRoutineAM: "Validé", validEatRoutinePM: "Validé", validWashRoutinePM: "Validé", validGetDressedRoutinePM: "Validé")
+    func testAddRoutine_WhenAnEntityIsCreated_ThenShouldBeCorrectlySaved() {
+        // Given
+        let routine = Routine(day: "jour 1", validWashRoutineAM: "Validé", validGetDressedRoutineAM: "Validé", validEatRoutineAM: "Validé", validWashRoutinePM: "Validé", validGetDressedRoutinePM: "Validé", validEatRoutinePM: "Validé")
+        let routineDay = RoutineDay(routine: routine)
+        let routineResult = RoutineResult(routineDays: [routineDay])
+        // When : Save the routine to Core Data
+        coreDataSetting.saveToCoreData(routineResult: routineResult)
+        // Then
         XCTAssertTrue(!coreDataSetting.routines.isEmpty)
         XCTAssertTrue(coreDataSetting.routines.count == 1)
         XCTAssertTrue(coreDataSetting.routines[0].day == "jour 1")
         XCTAssertTrue(coreDataSetting.routines[0].validWashRoutineAM == "Validé")
         XCTAssertTrue(coreDataSetting.routines.count > 0)
-        
     }
     
-  
-    func testDeleteAllRecipesMethod_WhenAnEntityIsCreated_ThenShouldBeCorrectlyAllDeleted() {
-        coreDataSetting.createRoutine(day: "jour 1", validEatRoutineAM: "Validé", validWashRoutineAM: "Validé", validGetDressedRoutineAM: "Validé", validEatRoutinePM: "Validé", validWashRoutinePM: "Validé", validGetDressedRoutinePM: "Validé")
-        coreDataSetting.deleteRoutine()
-        XCTAssertTrue(coreDataSetting.routines.isEmpty)
+    func testDeleteAllRoutines_WhenAnEntityIsCreated_ThenShouldBeAllCorrectlyDeleted() {
+        let routine = Routine(day: "jour 1", validWashRoutineAM: "Validé", validGetDressedRoutineAM: "Validé", validEatRoutineAM: "Validé", validWashRoutinePM: "Validé", validGetDressedRoutinePM: "Validé", validEatRoutinePM: "Validé")
         
-  //      let recipeIsFavorite = coreDataSetting.checkIfRecipeIsFavorite(recipeTitle: "My Recipe", url: "http://www.seriouseats.com/recipes/2009/09/adult-brownie-chocolate-salt-coffee-andronicos-supermarket-san-francisco-recipe.html")
-  //      XCTAssertFalse(recipeIsFavorite)
+        let routineDay = RoutineDay(routine: routine)
+        _ = RoutineResult(routineDays: [routineDay])
+        
+        coreDataSetting.deleteRoutines()
+        
+        XCTAssertTrue(coreDataSetting.routines.isEmpty)
     }
+    
 }

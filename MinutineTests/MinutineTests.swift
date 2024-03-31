@@ -9,28 +9,187 @@ import XCTest
 @testable import Minutine
 
 final class MinutineTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // MARK: - Properties
+    var timerSetting: TimerSetting!
+    var mockDelegate: MockTimerSettingDelegate!
+    
+    // MARK: - Methods
+    override func setUp() {
+        super.setUp()
+        timerSetting = TimerSetting()
+        mockDelegate = MockTimerSettingDelegate()
+        timerSetting.timerSettingDelegate = mockDelegate
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        timerSetting = nil
+        mockDelegate = nil
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testReturnSuccess_WashButtonGreenAM() {
+        let buttonTag = 0
+        let expectedImage = UIImage(named: "washV")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnSucces(buttonTag: buttonTag)
+        
+        XCTAssertTrue(mockDelegate.didCallUpdateWashButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateEatButton)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testReturnSuccess_GetDressedButtonGreenAM() {
+        let buttonTag = 1
+        let expectedImage = UIImage(named: "getDressedV")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnSucces(buttonTag: buttonTag)
+        
+        XCTAssertFalse(mockDelegate.didCallUpdateWashButton)
+        XCTAssertTrue(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateEatButton)
     }
+    
+    func testReturnSuccess_EatButtonGreenAM() {
+        let buttonTag = 2
+        let expectedImage = UIImage(named: "eatV")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnSucces(buttonTag: buttonTag)
+        
+        XCTAssertFalse(mockDelegate.didCallUpdateWashButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertTrue(mockDelegate.didCallUpdateEatButton)
+    }
+    
+    func testReturnSuccess_WashButtonGreenPM() {
+        let buttonTag = 3
+        let expectedImage = UIImage(named: "washV")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnSucces(buttonTag: buttonTag)
+        
+        XCTAssertTrue(mockDelegate.didCallUpdateWashButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateEatButton)
+    }
+    
+    func testReturnSuccess_GetDressedButtonGreenPM() {
+        let buttonTag = 4
+        let expectedImage = UIImage(named: "getDressedV")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnSucces(buttonTag: buttonTag)
+        
+        XCTAssertFalse(mockDelegate.didCallUpdateWashButton)
+        XCTAssertTrue(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateEatButton)
+    }
+    
+    func testReturnSuccess_EatButtonGreenPM() {
+        let buttonTag = 5
+        let expectedImage = UIImage(named: "eatV")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnSucces(buttonTag: buttonTag)
+        
+        XCTAssertFalse(mockDelegate.didCallUpdateWashButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertTrue(mockDelegate.didCallUpdateEatButton)
+    }
+    
+    func testReturnFailed_WashButtonRedAM() {
+        let buttonTag = 0
+        let expectedImage = UIImage(named: "washR")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnFailed(buttonTag: buttonTag)
+        
+        XCTAssertTrue(mockDelegate.didCallUpdateWashButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateEatButton)
+    }
+    
+    func testReturnFailed_GetDressedButtonRedAM() {
+        let buttonTag = 1
+        let expectedImage = UIImage(named: "getDressedR")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnFailed(buttonTag: buttonTag)
 
+        XCTAssertFalse(mockDelegate.didCallUpdateWashButton)
+        XCTAssertTrue(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateEatButton)
+    }
+    
+    func testReturnFailed_EatButtonRedAM() {
+        let buttonTag = 2
+        let expectedImage = UIImage(named: "eatR")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnFailed(buttonTag: buttonTag)
+
+        XCTAssertFalse(mockDelegate.didCallUpdateWashButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertTrue(mockDelegate.didCallUpdateEatButton)
+    }
+    
+    func testReturnFailed_WashButtonRedPM() {
+        let buttonTag = 3
+        let expectedImage = UIImage(named: "washR")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnFailed(buttonTag: buttonTag)
+
+        XCTAssertTrue(mockDelegate.didCallUpdateWashButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateEatButton)
+    }
+    
+    func testReturnFailed_GetDressedButtonRedPM() {
+        let buttonTag = 4
+        let expectedImage = UIImage(named: "getDressedR")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnFailed(buttonTag: buttonTag)
+
+        XCTAssertFalse(mockDelegate.didCallUpdateWashButton)
+        XCTAssertTrue(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateEatButton)
+    }
+    
+    func testReturnFailed_EatButtonRedPM() {
+        let buttonTag = 5
+        let expectedImage = UIImage(named: "eatR")
+        mockDelegate.expectedImage = expectedImage
+        
+        timerSetting.returnFailed(buttonTag: buttonTag)
+
+        XCTAssertFalse(mockDelegate.didCallUpdateWashButton)
+        XCTAssertFalse(mockDelegate.didCallUpdateGetDressedButton)
+        XCTAssertTrue(mockDelegate.didCallUpdateEatButton)
+    }
+ 
+    func testDayChoose() {
+        XCTAssertEqual(TimerSetting.routine.day, "")
+        XCTAssertEqual(TimerSetting.dayCounter, 1)
+        
+        timerSetting.dayChoose()
+
+        XCTAssertEqual(TimerSetting.routine.day, "jour 1")
+        XCTAssertEqual(TimerSetting.dayCounter, 2)
+    }
+    
+    func testDayChooseResetAfterSevenDays() {
+        // Arrange
+           TimerSetting.routine.day = ""
+           TimerSetting.dayCounter = 7
+           
+           timerSetting.dayChoose()
+           
+           XCTAssertEqual(TimerSetting.routine.day, "jour 7")
+           XCTAssertEqual(TimerSetting.dayCounter, 1)
+       }
+    
 }

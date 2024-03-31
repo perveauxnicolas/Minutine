@@ -29,6 +29,7 @@
 		8BE5E6242BA352D70015E411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE5E6222BA352D70015E411 /* LaunchScreen.storyboard */; };
 		8BE5E62F2BA352D70015E411 /* MinutineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE5E62E2BA352D70015E411 /* MinutineTests.swift */; };
 		8BFF3EB02BB88EB800D120EC /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFF3EAF2BB88EB800D120EC /* UITableViewCell.swift */; };
+		8BFF3EB22BB978F300D120EC /* MockTimerSettingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFF3EB12BB978F300D120EC /* MockTimerSettingDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		8BE5E62A2BA352D70015E411 /* MinutineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinutineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE5E62E2BA352D70015E411 /* MinutineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinutineTests.swift; sourceTree = "<group>"; };
 		8BFF3EAF2BB88EB800D120EC /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		8BFF3EB12BB978F300D120EC /* MockTimerSettingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimerSettingDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				8BE5E62E2BA352D70015E411 /* MinutineTests.swift */,
+				8BFF3EB12BB978F300D120EC /* MockTimerSettingDelegate.swift */,
 				8BD047322BB5D6A9008AA8D2 /* MockCoreDataStack.swift */,
 				8BD047342BB5D713008AA8D2 /* CoreDataSettingTests.swift */,
 			);
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BE5E62F2BA352D70015E411 /* MinutineTests.swift in Sources */,
+				8BFF3EB22BB978F300D120EC /* MockTimerSettingDelegate.swift in Sources */,
 				8BD047352BB5D713008AA8D2 /* CoreDataSettingTests.swift in Sources */,
 				8BD047332BB5D6A9008AA8D2 /* MockCoreDataStack.swift in Sources */,
 			);

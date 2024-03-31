@@ -19,11 +19,9 @@ class ResultRoutineTableViewCell: UITableViewCell {
     @IBOutlet weak var eatPMLabel: UILabel!
     @IBOutlet weak var viewCell: UIView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         customViewCell(view: viewCell)
-        //   addShadowTexte(label: titleRecipeLabel )
     }
     
     // MARK: - Properties
@@ -38,11 +36,4 @@ class ResultRoutineTableViewCell: UITableViewCell {
             eatPMLabel.text = routineEntity?.validEatRoutinePM
         }
     }
-    
-    
-  /*
-    func configure(with routine: RoutineEntity) {
-        jourLabel.text = routineEntity?.day
-        washAMLabel.text = routineEntity?.validWashRoutineAM
-    }*/
 }
