@@ -11,7 +11,7 @@ class EveningRoutineViewController: UIViewController {
     
     // MARK: - Properties
     private let segueToTimer2 = "segueToTimer2"
-    let timerSetting = TimerSetting()
+    private let timerSetting = TimerSetting()
     
     // MARK: - Outlets
     @IBOutlet weak var washButton: UIButton!
@@ -22,6 +22,12 @@ class EveningRoutineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timerSetting.timerSettingDelegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateWashGreenButtonPM), name: Notification.Name("washGreenPM"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateGetGreenButtonPM), name: Notification.Name("getGreenPM"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateEatGreenButtonPM), name: Notification.Name("eatGreenPM"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateWashRedButtonPM), name: Notification.Name("washRedPM"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateGetRedButtonPM), name: Notification.Name("getRedPM"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateEatRedButtonPM), name: Notification.Name("eatRedPM"), object: nil)
     }
     
     // MARK: - Actions
@@ -36,6 +42,37 @@ class EveningRoutineViewController: UIViewController {
     @IBAction func tapeEatButton(_ sender: UIButton) {
         performSegue(withIdentifier: self.segueToTimer2, sender: sender.tag)
     }
+    
+    @IBAction func tapeResetButton(_ sender: UIButton) {
+        resetAllButton(washButton: washButton, getDressedButton: getDressedButton, eatButton: eatButton)
+    }
+    
+    // MARK: - Methods
+    @objc func didUpdateWashGreenButtonPM() {
+        washButton.setImage(UIImage(named: "washV"), for: .normal)
+        washButton.isEnabled = false
+    }
+    @objc func didUpdateGetGreenButtonPM() {
+        getDressedButton.setImage(UIImage(named: "getDressedV"), for: .normal)
+        getDressedButton.isEnabled = false
+    }
+    @objc func didUpdateEatGreenButtonPM() {
+        eatButton.setImage(UIImage(named: "eatV"), for: .normal)
+        eatButton.isEnabled = false
+    }
+    @objc func didUpdateWashRedButtonPM() {
+        washButton.setImage(UIImage(named: "washR"), for: .normal)
+        washButton.isEnabled = false
+    }
+    @objc func didUpdateGetRedButtonPM() {
+        getDressedButton.setImage(UIImage(named: "getDressedR"), for: .normal)
+        getDressedButton.isEnabled = false
+    }
+    @objc func didUpdateEatRedButtonPM() {
+        eatButton.setImage(UIImage(named: "eatR"), for: .normal)
+        eatButton.isEnabled = false
+    }
+    
 }
 
 // MARK: - Navigation

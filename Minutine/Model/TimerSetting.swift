@@ -41,6 +41,7 @@ class TimerSetting  {
             if TimerSetting.routine.validWashRoutineAM.isEmpty {
                 TimerSetting.routine.validWashRoutineAM =  "Validé"
             }
+            NotificationCenter.default.post(name: Notification.Name("washGreenAM"), object: nil)
             timerSettingDelegate?.didUpdateWashButton(image: washButtonGreen)
             
         } else if buttonTag == 1 {
@@ -48,6 +49,7 @@ class TimerSetting  {
             if TimerSetting.routine.validGetDressedRoutineAM.isEmpty {
                 TimerSetting.routine.validGetDressedRoutineAM = "Validé"
             }
+            NotificationCenter.default.post(name: Notification.Name("getGreenAM"), object: nil)
             timerSettingDelegate?.didUpdateGetDressedButton(image: getDressedBButtonGreen)
             
         } else if buttonTag == 2 {
@@ -55,6 +57,7 @@ class TimerSetting  {
             if TimerSetting.routine.validEatRoutineAM.isEmpty {
                 TimerSetting.routine.validEatRoutineAM = "Validé"
             }
+            NotificationCenter.default.post(name: Notification.Name("eatGreenAM"), object: nil)
             timerSettingDelegate?.didUpdateEatButton(image: eatButtonGreen)
             
         } else if buttonTag == 3 {
@@ -62,6 +65,7 @@ class TimerSetting  {
             if TimerSetting.routine.validWashRoutinePM.isEmpty {
                 TimerSetting.routine.validWashRoutinePM = "Validé"
             }
+            NotificationCenter.default.post(name: Notification.Name("washGreenPM"), object: nil)
             timerSettingDelegate?.didUpdateWashButton(image: washButtonGreen)
             
         } else if buttonTag == 4 {
@@ -69,6 +73,7 @@ class TimerSetting  {
             if TimerSetting.routine.validGetDressedRoutinePM.isEmpty {
                 TimerSetting.routine.validGetDressedRoutinePM = "Validé"
             }
+            NotificationCenter.default.post(name: Notification.Name("getGreenPM"), object: nil)
             timerSettingDelegate?.didUpdateGetDressedButton(image: getDressedBButtonGreen)
             
         } else if buttonTag == 5 {
@@ -76,6 +81,7 @@ class TimerSetting  {
             if TimerSetting.routine.validEatRoutinePM.isEmpty {
                 TimerSetting.routine.validEatRoutinePM = "Validé"
             }
+            NotificationCenter.default.post(name: Notification.Name("eatGreenPM"), object: nil)
             timerSettingDelegate?.didUpdateEatButton(image: eatButtonGreen)
         }
         
@@ -92,18 +98,18 @@ class TimerSetting  {
         dayChoose()
         if buttonTag == 0 {
             let washButtonRed = UIImage(named: "washR")
-            timerSettingDelegate?.didUpdateWashButton(image: washButtonRed)
-            
             if TimerSetting.routine.validWashRoutineAM.isEmpty {
                 TimerSetting.routine.validWashRoutineAM =  "échec"
             }
-            //   timerSettingDelegate?.didUpdateWashButton(image: washButtonRed)
+            NotificationCenter.default.post(name: Notification.Name("washRedAM"), object: nil)
+            timerSettingDelegate?.didUpdateWashButton(image: washButtonRed)
             
         } else if buttonTag == 1 {
             let getDressedBButtonRed = UIImage(named: "getDressedR")
             if TimerSetting.routine.validGetDressedRoutineAM.isEmpty {
                 TimerSetting.routine.validGetDressedRoutineAM = "échec"
             }
+            NotificationCenter.default.post(name: Notification.Name("getRedAM"), object: nil)
             timerSettingDelegate?.didUpdateGetDressedButton(image: getDressedBButtonRed)
             
         } else if buttonTag == 2 {
@@ -111,6 +117,7 @@ class TimerSetting  {
             if TimerSetting.routine.validEatRoutineAM.isEmpty {
                 TimerSetting.routine.validEatRoutineAM = "échec"
             }
+            NotificationCenter.default.post(name: Notification.Name("eatRedAM"), object: nil)
             timerSettingDelegate?.didUpdateEatButton(image: eatButtonRed)
             
         } else if buttonTag == 3 {
@@ -118,6 +125,7 @@ class TimerSetting  {
             if TimerSetting.routine.validWashRoutinePM.isEmpty {
                 TimerSetting.routine.validWashRoutinePM = "échec"
             }
+            NotificationCenter.default.post(name: Notification.Name("washRedPM"), object: nil)
             timerSettingDelegate?.didUpdateWashButton(image: washButtonRed)
             
         } else if buttonTag == 4 {
@@ -125,6 +133,7 @@ class TimerSetting  {
             if TimerSetting.routine.validGetDressedRoutinePM.isEmpty {
                 TimerSetting.routine.validGetDressedRoutinePM = "échec"
             }
+            NotificationCenter.default.post(name: Notification.Name("getRedPM"), object: nil)
             timerSettingDelegate?.didUpdateGetDressedButton(image: getDressedBButtonRed)
             
         } else if buttonTag == 5 {
@@ -132,10 +141,9 @@ class TimerSetting  {
             if TimerSetting.routine.validEatRoutinePM.isEmpty {
                 TimerSetting.routine.validEatRoutinePM = "échec"
             }
+            NotificationCenter.default.post(name: Notification.Name("eatRedPM"), object: nil)
             timerSettingDelegate?.didUpdateEatButton(image: eatButtonRed)
-            /*   originViewControllerPM?.eatButton.setImage(eatButtonRed, for: .normal)
-             originViewControllerPM?.eatButton.isEnabled = false*/
-        }
+                }
         
         let routineDay = RoutineDay(routine: TimerSetting.routine)
         let routineResult = RoutineResult(routineDays: [routineDay])

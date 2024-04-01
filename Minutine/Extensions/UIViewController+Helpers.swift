@@ -42,4 +42,20 @@ extension UIViewController  {
         timerLayer.add(animation, forKey: "timerAnimation")
     }
     
+    func resetAllButton(washButton: UIButton, getDressedButton: UIButton, eatButton: UIButton) {
+           let washButtonWhite = UIImage(named: "washB")
+           washButton.setImage(washButtonWhite, for: .normal)
+           washButton.isEnabled = true
+           
+           let getDressedBButtonWhite = UIImage(named: "getDressedB")
+           getDressedButton.setImage(getDressedBButtonWhite, for: .normal)
+           getDressedButton.isEnabled = true
+           
+           let eatButtonWhite = UIImage(named: "eatB")
+           eatButton.setImage(eatButtonWhite, for: .normal)
+           eatButton.isEnabled = true
+       }
+    
+    
+    
 }

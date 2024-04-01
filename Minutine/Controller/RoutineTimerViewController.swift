@@ -12,14 +12,9 @@ import UIKit
 class RoutineTimerViewController: UIViewController {
     
     // MARK: - Properties
-    let timerLayer = CAShapeLayer()
-    let timerLayerFond = CAShapeLayer()
+    private let timerLayer = CAShapeLayer()
+    private let timerLayerFond = CAShapeLayer()
     let timerSetting = TimerSetting()
-   
-  //  var routineResult = [RoutineDay]()
-    
-  //  var originViewControllerAM: MorningRoutineViewController?
-   // var originViewControllerPM: EveningRoutineViewController?
     var buttonTag: Int?
     
     // MARK: - Outlets
