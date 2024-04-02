@@ -10,6 +10,8 @@ import UIKit
 final class ResultRoutineViewController: UIViewController {
     
     // MARK: - Properties
+  //  var timerDuration: TimeInterval = 5.0 // Valeur par défaut
+    
     private var coreDataSetting: CoreDataSetting?
     private var cellSelected: RoutineDay?
     private let listRoutineCell = "listRoutineCell"
@@ -17,6 +19,7 @@ final class ResultRoutineViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var resultRoutineTableView: UITableView!
+    @IBOutlet weak var durationSegmentedControl: UISegmentedControl!
     
     // MARK: - View life cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +35,31 @@ final class ResultRoutineViewController: UIViewController {
        coreDataSetting?.deleteRoutines()
         resultRoutineTableView.reloadData()
     }
+   
+    @IBAction func durationTimer(_ sender: UISegmentedControl) {
+        var timerDuration: TimeInterval = 0.0
+        switch sender.selectedSegmentIndex {
+        case 0:
+            timerDuration = 5.0
+        case 1:
+            timerDuration = 300.0
+        case 2:
+            timerDuration = 600.0
+        default:
+            break
+        }
+        print("Durée de minuterie sélectionnée : \(timerDuration)")
+      // NotificationCenter.default.post(name: Notification.Name("SelectedTimerDuration"), object: nil, userInfo: ["timerDuration": timerDuration])
+
+        saveTimerDuration(timerDuration) // Sauvegarde la nouvelle valeur dans UserDefaults
+        // Post notification avec la durée sélectionnée
+        NotificationCenter.default.post(name: Notification.Name("SelectedTimerDuration"), object: nil, userInfo: ["timerDuration": timerDuration])
+    }
+    
+    private func saveTimerDuration(_ duration: TimeInterval) {
+        UserDefaults.standard.set(duration, forKey: "timerDuration")
+    }
+
     
     // MARK: - Privates
     private  func coreDataFunction() {

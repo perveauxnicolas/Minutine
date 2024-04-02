@@ -88,7 +88,7 @@ class TimerSetting  {
         let routineDay = RoutineDay(routine: TimerSetting.routine)
         let routineResult = RoutineResult(routineDays: [routineDay])
         
-        if TimerSetting.routine.isFullyFilled() { /// Si oui, sauvegarder dans Core Data
+        if TimerSetting.routine.isFullyFilled() { 
             coreDataSetting.saveToCoreData(routineResult: routineResult)
             TimerSetting.routine = Routine(day: "", validWashRoutineAM: "", validGetDressedRoutineAM: "", validEatRoutineAM: "", validWashRoutinePM: "", validGetDressedRoutinePM: "", validEatRoutinePM: "")
         }

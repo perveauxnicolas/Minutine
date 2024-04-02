@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController  {
     
-    func setupTimerAnimation( timerLayer: CAShapeLayer,timerLayerFond: CAShapeLayer) {
+    func setupTimerAnimation( timerLayer: CAShapeLayer,timerLayerFond: CAShapeLayer, timerDuration: TimeInterval ) {
         let center = view.center
         let circularPath = UIBezierPath(arcCenter: center, radius: 75, startAngle: -CGFloat.pi/2, endAngle: 2*CGFloat.pi-CGFloat.pi/2, clockwise: true)
         let circularPathFond = UIBezierPath(arcCenter: center, radius: 75, startAngle: -CGFloat.pi/2, endAngle: 2*CGFloat.pi-CGFloat.pi/2, clockwise: true)
@@ -36,7 +36,7 @@ extension UIViewController  {
         
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.toValue = 1
-        animation.duration = 5
+        animation.duration = timerDuration
         animation.fillMode = .forwards
         animation.isRemovedOnCompletion = false
         timerLayer.add(animation, forKey: "timerAnimation")

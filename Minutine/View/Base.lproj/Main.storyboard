@@ -106,7 +106,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="soleil"/>
+                            <state key="normal" image="logoMinutineBlanc"/>
                             <connections>
                                 <action selector="tapeResetButton:" destination="Kls-nm-LYo" eventType="touchUpInside" id="ec6-Ax-CGz"/>
                                 <action selector="tapeResetButton:" destination="FgP-ZJ-zKN" eventType="touchUpInside" id="wjo-qx-pSb"/>
@@ -153,7 +153,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cmS-mI-aDy">
-                                <rect key="frame" x="0.0" y="94" width="375" height="635"/>
+                                <rect key="frame" x="0.0" y="129" width="375" height="600"/>
                                 <color key="backgroundColor" red="0.62745100259999997" green="0.32941177490000001" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="listRoutineCell" rowHeight="90" id="Hg2-hx-2ia" customClass="ResultRoutineTableViewCell" customModule="Minutine" customModuleProvider="target">
@@ -307,14 +307,29 @@
                                     <outlet property="delegate" destination="MDv-dt-bkc" id="OhW-IE-KS4"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pFy-T7-hFv">
+                                <rect key="frame" x="10" y="94" width="355" height="32"/>
+                                <segments>
+                                    <segment title=" 5 s"/>
+                                    <segment title="5 min"/>
+                                    <segment title="10 min"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="durationTimer:" destination="MDv-dt-bkc" eventType="valueChanged" id="g8i-Yn-us2"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r0n-Sb-dEs"/>
                         <color key="backgroundColor" red="0.62745100259999997" green="0.32941177490000001" blue="0.53333336109999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="pFy-T7-hFv" firstAttribute="top" secondItem="r0n-Sb-dEs" secondAttribute="top" id="9zv-r4-BhS"/>
                             <constraint firstItem="r0n-Sb-dEs" firstAttribute="bottom" secondItem="cmS-mI-aDy" secondAttribute="bottom" id="BzO-do-7hr"/>
                             <constraint firstItem="cmS-mI-aDy" firstAttribute="leading" secondItem="r0n-Sb-dEs" secondAttribute="leading" id="E1m-gh-mT7"/>
+                            <constraint firstItem="r0n-Sb-dEs" firstAttribute="trailing" secondItem="pFy-T7-hFv" secondAttribute="trailing" constant="10" id="VDo-kN-Qi2"/>
                             <constraint firstItem="r0n-Sb-dEs" firstAttribute="trailing" secondItem="cmS-mI-aDy" secondAttribute="trailing" id="Zp0-DI-VUy"/>
-                            <constraint firstItem="cmS-mI-aDy" firstAttribute="top" secondItem="r0n-Sb-dEs" secondAttribute="top" id="kij-G2-zaE"/>
+                            <constraint firstItem="cmS-mI-aDy" firstAttribute="top" secondItem="r0n-Sb-dEs" secondAttribute="top" constant="35" id="kij-G2-zaE"/>
+                            <constraint firstItem="pFy-T7-hFv" firstAttribute="leading" secondItem="r0n-Sb-dEs" secondAttribute="leading" constant="10" id="vJ3-ww-lUj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nYl-ec-Mx5">
@@ -326,12 +341,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="durationSegmentedControl" destination="pFy-T7-hFv" id="VH9-tA-1V7"/>
                         <outlet property="resultRoutineTableView" destination="cmS-mI-aDy" id="L0X-Ea-Q7q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qkY-Ac-NTv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1484.7328244274809" y="1038.7323943661972"/>
+            <point key="canvasLocation" x="1484" y="1038.1773399014778"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ud1-c5-91R">
@@ -429,7 +445,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="soleil"/>
+                            <state key="normal" image="logoMinutineBlanc"/>
                             <connections>
                                 <action selector="tapeResetButton:" destination="FgP-ZJ-zKN" eventType="touchUpInside" id="x58-U4-MK6"/>
                             </connections>
@@ -567,13 +583,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="C4m-yk-Sf2"/>
+        <segue reference="zag-nB-WvR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DelateRoutines" width="1023.3333129882812" height="271.33334350585938"/>
         <image name="eatB" width="1024" height="272"/>
         <image name="getDressedB" width="1024" height="273"/>
         <image name="itsdone" width="1023.3333129882812" height="271.33334350585938"/>
+        <image name="logoMinutineBlanc" width="25" height="25"/>
         <image name="lune" width="25" height="25"/>
         <image name="soleil" width="25" height="25"/>
         <image name="trueFalse" width="25" height="25"/>

@@ -170,8 +170,8 @@
 		8BE5E6162BA352D40015E411 /* Minutine */ = {
 			isa = PBXGroup;
 			children = (
-				8BE5E6252BA352D70015E411 /* Info.plist */,
 				8BD047362BB5DA63008AA8D2 /* GoogleService-Info.plist */,
+				8BE5E6252BA352D70015E411 /* Info.plist */,
 				8B3BC1702BAAEE0D00F23DBD /* Extensions */,
 				8B3BC1712BAAEE2400F23DBD /* Model */,
 				8B3BC1722BAAEE3A00F23DBD /* Controller */,
